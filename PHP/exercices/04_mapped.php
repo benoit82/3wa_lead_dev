@@ -6,15 +6,15 @@
 mapped(numbers: ['x' => 1,'y' => 2,'z' => 3,'t' => 7], glue : ', ', symbol : "=");
 
 x = 1, y = 2, z = 3, t = 7
- */
+*/
 
-function mapped(array $numbers, string $glue, string $symbol): void
+function mapped(array $numbers, string $glue, string $symbol): string
 {
     $str = "";
     foreach ($numbers as $key => $value) {
         $str .=  "$key $symbol $value$glue";
     }
-    echo substr($str, 0, -2); // retire le caractère de fin et la dernière glue
+    return substr($str, 0, strlen($glue) * -1); // retire la dernière glue
 }
 
-mapped(numbers: ['x' => 1, 'y' => 2, 'z' => 3, 't' => 7], glue: ', ', symbol: "=");
+echo mapped(numbers: ['x' => 1, 'y' => 2, 'z' => 3, 't' => 7], glue: ', ', symbol: "=");
