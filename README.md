@@ -4,6 +4,7 @@
 - Scope / porté de variable (ne marche pas)
 
 ### Exercices :
-- 1 : permutations de données
-- 2 : suite de fibonacci
-- 3 : split array
+- 01 : permutations de données
+- 02 : suite de fibonacci
+- 03 : split array
+- 04 : mapped
