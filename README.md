@@ -6,3 +6,4 @@
 ### Exercices :
 - 1 : permutations de données
 - 2 : suite de fibonacci
+- 3 : split array
