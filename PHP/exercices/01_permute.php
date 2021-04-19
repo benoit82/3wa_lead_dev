@@ -2,7 +2,7 @@
 $a = 1;
 $b = 2;
 $c = 3;
-echo "$a, $b, $c\n";
+echo "$a, $b, $c" . PHP_EOL;
 
 function permute(&$a, &$b, &$c)
 {
