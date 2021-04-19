@@ -8,3 +8,4 @@
 - 02 : suite de fibonacci
 - 03 : split array
 - 04 : mapped
+- 05 : zipper
