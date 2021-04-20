@@ -69,9 +69,9 @@ function testsEx4()
         try {
             $testFunction();
             echo "✅ $name" . PHP_EOL;
-        } catch (Throwable $th) {
-            $errLine = $th->getTrace()[0]['line'];
-            $errArg = $th->getTrace()[0]['args'][1];
+        } catch (AssertionError $e) {
+            $errLine = $e->getTrace()[0]['line'];
+            $errArg = $e->getTrace()[0]['args'][1];
             echo "❌ $name ligne $errLine --> $errArg" . PHP_EOL;
         }
     }
