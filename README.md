@@ -1,7 +1,7 @@
 # Pratique Lead Dev. 3WA
 ## Semaine 1 : PHP avancé
 ### Exemples :
-- Scope / porté de variable (ne marche pas)
+- Scope / porté de variable (ne marche pas pour l'exemple)
 
 ### Exercices :
 - 01 : permutations de données
