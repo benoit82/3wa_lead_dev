@@ -3,6 +3,7 @@
 Ecrire la fonction transform
 */
 
+// #1
 function transform(array $nombres): array
 {
     $res = [];
@@ -11,6 +12,8 @@ function transform(array $nombres): array
     }
     return $res;
 }
+
+
 
 function testThatTransformWorks()
 {
@@ -25,4 +28,29 @@ function testThatTransformWorks()
     assert($transmation[3] === 8);
 }
 
+
+// #2
+function transformStrings(array $strings): array
+{
+    $res = [];
+    foreach ($strings as $str) {
+        $res[] = strtoupper($str);
+    }
+    return $res;
+}
+
+function testThatTransformStringsWorks()
+{
+    $chaines = ['Lior', 'Magali', 'Elise'];
+
+    $transmation = transformStrings($chaines);
+
+    assert(is_array($transmation));
+    assert($transmation[0] === 'LIOR');
+    assert($transmation[1] === 'MAGALI');
+    assert($transmation[2] === 'ELISE');
+}
+
+// tests launchers
 testThatTransformWorks();
+testThatTransformStringsWorks();
