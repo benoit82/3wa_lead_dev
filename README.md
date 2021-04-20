@@ -14,3 +14,4 @@
 ### Training algo :
 - 01 : nombre max dans un tableau
 - 02 : transformation
+- 03 : callable

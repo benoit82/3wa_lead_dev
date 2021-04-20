@@ -22,15 +22,16 @@ function transform(array $tab, callable $trans): array
     return $res;
 }
 
-$resultat = transform([1, 2, 3, 4], 'transformNumber');
+$numbers = [1, 2, 3, 4];
+$resultat = transform($numbers, 'transformNumber');
 assert(is_array($resultat));
 assert($resultat[0] === 2);
 assert($resultat[1] === 4);
 assert($resultat[2] === 6);
 assert($resultat[3] === 8);
 
-
-$resultat = transform(["Lior", "Magali", 'Elise'], 'transformString');
+$names = ["Lior", "Magali", 'Elise'];
+$resultat = transform($names, 'transformString');
 assert(is_array($resultat));
 assert($resultat[0] === "LIOR");
 assert($resultat[1] === "MAGALI");
