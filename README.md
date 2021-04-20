@@ -15,3 +15,4 @@
 - 01 : nombre max dans un tableau
 - 02 : transformation
 - 03 : callable
+- 04 : filter
