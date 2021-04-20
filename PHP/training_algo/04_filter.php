@@ -9,6 +9,15 @@ function filter(array $nombres): array
     return $res;
 }
 
+function filter2(array $nombres): array
+{
+    $res = [];
+    foreach ($nombres as $nombre) {
+        if ($nombre < 10) $res[] = $nombre;
+    }
+    return $res;
+}
+
 function testWeCanFilter()
 {
     $nombres = [2, 20, 1, 15, 11];
@@ -22,4 +31,17 @@ function testWeCanFilter()
     assert($results[2] === 11);
 }
 
+function testWeCanFilterOther()
+{
+    $nombres = [2, 20, 1, 15, 11];
+
+    $results = filter2($nombres);
+
+    assert(is_array($results));
+    assert(count($results) === 2);
+    assert($results[0] === 2);
+    assert($results[1] === 1);
+}
+
 testWeCanFilter();
+testWeCanFilterOther();
