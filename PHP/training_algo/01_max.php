@@ -5,13 +5,9 @@ Créer la fonction getMaxNumber
 
 function getMaxNumber(array $numbers): int
 {
-    $max = null;
+    $max = array_shift($numbers);
     foreach ($numbers as $number) {
-        if ($max === null) {
-            $max = $number;
-        } else {
-            if ($number > $max) $max = $number;
-        }
+        if ($number > $max) $max = $number;
     }
     return $max;
 }
