@@ -21,18 +21,23 @@ function transform(array $tab, callable $trans): array
     }
     return $res;
 }
+function test_table_numbers()
+{
+    $numbers = [1, 2, 3, 4];
+    $resultat = transform($numbers, 'transformNumber');
+    assert(is_array($resultat));
+    assert($resultat[0] === 2);
+    assert($resultat[1] === 4);
+    assert($resultat[2] === 6);
+    assert($resultat[3] === 8);
+}
 
-$numbers = [1, 2, 3, 4];
-$resultat = transform($numbers, 'transformNumber');
-assert(is_array($resultat));
-assert($resultat[0] === 2);
-assert($resultat[1] === 4);
-assert($resultat[2] === 6);
-assert($resultat[3] === 8);
-
-$names = ["Lior", "Magali", 'Elise'];
-$resultat = transform($names, 'transformString');
-assert(is_array($resultat));
-assert($resultat[0] === "LIOR");
-assert($resultat[1] === "MAGALI");
-assert($resultat[2] === "ELISE");
+function test_table_names()
+{
+    $names = ["Lior", "Magali", 'Elise'];
+    $resultat = transform($names, 'transformString');
+    assert(is_array($resultat));
+    assert($resultat[0] === "LIOR");
+    assert($resultat[1] === "MAGALI");
+    assert($resultat[2] === "ELISE");
+}
