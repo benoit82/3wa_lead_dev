@@ -15,7 +15,8 @@ function tests(string $filename)
         } catch (AssertionError $e) {
             $errLine = $e->getTrace()[0]['line'];
             $errArg = $e->getTrace()[0]['args'][1];
-            echo "❌ $name : ligne $errLine --> $errArg" . PHP_EOL;
+            $errFile = $e->getFile();
+            echo "❌ $name : ligne $errArg --> $errFile:$errLine" . PHP_EOL;
         }
     }
 }
