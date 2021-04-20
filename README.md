@@ -10,3 +10,6 @@
 - 04 : mapped
 - 05 : zipper
 - 06 : fizzbuzz
+
+### Training algo :
+- 01 : nombre max dans un tableau
