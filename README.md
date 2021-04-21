@@ -15,6 +15,7 @@
 
 #### Chapitre 2 : closure
 - 01 : calcul de tva
+- 02 : tva sur prix pairs
 
 ### Training algo :
 - 01 : nombre max dans un tableau
