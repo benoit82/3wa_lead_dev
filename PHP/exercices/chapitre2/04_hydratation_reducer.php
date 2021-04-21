@@ -1,5 +1,6 @@
 <?php
-
+define('TVA', .2);
+$products = [['milk', 3, 3], ['butter', 2.5, 2], ['eggs', .7, 10]];
 //repris de l'éxercice précédent
 function my_reduce(array $values, callable $callback, int $initial = 0): int
 {
@@ -13,13 +14,14 @@ function my_reduce(array $values, callable $callback, int $initial = 0): int
 $hydrate = function () use ($products): array {
     $res = [];
 
-    foreach ($products as $product) {
-        $res[] = new class(name: $product[0], price: $product[1], qte: $product[2])
+    foreach ($products as list($name, $price, $qte)) {
+        $res[] = new class(name: $name, price: $price, qte: $qte)
         {
             public function __construct(
                 public string $name,
-                public int $price,
-                public int $qte
+                public float $price,
+                public int $qte,
+                public float $tva = TVA
             ) {
             }
         };
@@ -29,8 +31,8 @@ $hydrate = function () use ($products): array {
 };
 
 $callback = function ($totalTTC, $currentObj) {
-    return $totalTTC + ($currentObj->price *  $currentObj->qte);
+    return $totalTTC + (($currentObj->price *  $currentObj->qte) * (1 + $currentObj->tva));
 };
 
-$products = [['milk', 3, 3], ['butter', 2.5, 2], ['eggs', .7, 10]];
+
 echo my_reduce($hydrate(), $callback, 0); // 21
