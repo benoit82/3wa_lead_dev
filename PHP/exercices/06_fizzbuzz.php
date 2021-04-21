@@ -12,10 +12,10 @@ function fizzbuzz(): string
 {
     $str = "";
     for ($i = 1; $i <= 100; $i++)
-        $str .= match ($i <= 100) {
-            ($i % 5 === 0 && $i % 3 === 0) => "FizzBuzz ",
-            $i % 5 === 0 => "Buzz ",
-            $i % 3 === 0 => "Fizz ",
+        $str .= match (0) {
+            $i % 15 => "FizzBuzz ",
+            $i % 5  => "Buzz ",
+            $i % 3  => "Fizz ",
             default => "$i ",
         };
     return $str;
