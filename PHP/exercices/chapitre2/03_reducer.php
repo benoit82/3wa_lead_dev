@@ -17,4 +17,4 @@ function my_reduce(array $numbers, callable $fn, int $initial = 0): int
 
 $numbers = [1, 2, 3, 4];
 
-echo my_reduce($numbers, $f, 0);
+echo my_reduce($numbers, $f);
