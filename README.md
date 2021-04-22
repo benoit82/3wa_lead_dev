@@ -29,9 +29,12 @@
 
 - tri à bulle
 
-#### Chapitre 3 : generateur
+#### Chapitre 3 : generateur (yield)
 
 - 01 : generateur d'entier pair
+- 02 : xrange
+- 03 : read file
+- 04 : read file content (key, value)
 
 ### Training algo :
 
