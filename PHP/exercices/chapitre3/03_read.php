@@ -14,6 +14,6 @@ function readChar($file, $modulo = 2)
     fclose($f);
 }
 
-$gen = readChar('./content/char.txt', 2);
+$gen = readChar('./char.txt', 2);
 
 foreach ($gen as $line) echo $line . PHP_EOL;
