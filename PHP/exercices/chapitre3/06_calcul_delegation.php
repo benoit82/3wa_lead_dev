@@ -1,24 +1,29 @@
 <?php
-function generateur($param = 10)
+function generateur(int $param = 10): Generator
 {
     for ($i = 1; $i <= $param; $i++) {
         yield $i;
     }
 }
 
-function gen()
+function getOne($param): Generator
+{
+    for ($i = 1; $i <= $param; $i++) {
+        yield 1;
+    }
+}
+
+function main()
 {
     $gen = generateur();
 
     foreach ($gen as $v) {
         if ($v % 3 === 0) {
-            for ($a = 0; $a < $v; $a++) {
-                echo "1" . PHP_EOL;
-            }
+            yield from getOne($v);
         } else {
             echo $v . PHP_EOL;
         }
     }
 }
 
-gen();
+main();
