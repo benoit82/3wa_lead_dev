@@ -5,6 +5,7 @@ function readChar($file)
 
     $f = fopen($file, 'r');
     while ($line = fgets($f)) {
+        $line = str_replace(["\n", "\r"], ['', ''], $line);
         list($key, $value) = explode('=', $line);
         yield $key => $value;
     }
@@ -14,4 +15,4 @@ function readChar($file)
 
 $gen = readChar('./content_key.txt');
 
-foreach ($gen as $key => $value) echo "$key --> $value";
+foreach ($gen as $key => $value) echo "$key --> $value" . PHP_EOL;
