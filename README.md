@@ -29,6 +29,10 @@
 
 - tri à bulle
 
+#### Chapitre 3 : generateur
+
+- 01 : generateur d'entier pair
+
 ### Training algo :
 
 - 01 : nombre max dans un tableau
