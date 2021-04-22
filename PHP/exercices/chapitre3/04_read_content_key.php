@@ -13,6 +13,6 @@ function readChar($file)
     fclose($f);
 }
 
-$gen = readChar('./content_key.txt');
+$gen = readChar('../content/content_key.txt');
 
 foreach ($gen as $key => $value) echo "$key --> $value" . PHP_EOL;
