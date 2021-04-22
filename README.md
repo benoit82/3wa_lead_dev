@@ -37,7 +37,7 @@
 - 04 : read file content (key, value)
 - 05 : suite de fibonacci, version generator
 - 06 : suite de nombre, affiche "1" lors des multiples de 3
-- 07 : affiche dépense des users depuis fichiers txt
+- 07 : shop
 
 ### Training algo :
 

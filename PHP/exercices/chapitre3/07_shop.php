@@ -19,7 +19,7 @@ function main(): void
     foreach ($genUsers as $id => $name) {
         $genPrices = getFileContent(FILE_BASE_PATH . 'prices.txt');
         foreach ($genPrices as $id2 => $price) {
-            if ($id === $id2) echo "$name : $price" . PHP_EOL;
+            if ($id === $id2) echo "Name : $name, price : $price" . PHP_EOL;
         }
     }
 }
