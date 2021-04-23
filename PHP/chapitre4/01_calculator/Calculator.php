@@ -28,6 +28,13 @@ class Calculator
         return round($a / $b, $this->precision);
     }
 
+    public function sum(float ...$numbers): float
+    {
+        return array_reduce($numbers, function ($a, $b) {
+            return $a + $b;
+        });
+    }
+
     public function result(array $operation): float | Exception
     {
         list($numbers, $operator) = $operation;
@@ -36,6 +43,7 @@ class Calculator
             "-" => $this->soustraction(...$numbers),
             "*" => $this->multiplication(...$numbers),
             "/" => $this->division(...$numbers),
+            "sum" => $this->sum(...$numbers),
             default => throw new Exception("Opérateur invalide."),
         };
     }
