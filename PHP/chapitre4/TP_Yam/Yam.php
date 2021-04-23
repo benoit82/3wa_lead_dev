@@ -10,7 +10,7 @@ class Yam
     ) {
     }
 
-    public function lancerDes(int $nbEssais = 1)
+    public function lancerDes(int $nbEssais = 50)
     {
         for ($i = 1; $i <= $nbEssais; $i++) {
             $essai = [];
@@ -37,12 +37,12 @@ class Yam
                     5 => $this->stats["Yam"]++,
                     default => "",
                 };
-
             }
         }
     }
 
-    public function showStats() :string {
+    public function showStats(): string
+    {
         $afficher = "";
         foreach ($this->stats as $key => $value) {
             $afficher .= "$key : $value" . PHP_EOL;
