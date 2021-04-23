@@ -43,7 +43,7 @@ class Yam
 
     public function showStats(): string
     {
-        $afficher = "";
+        $afficher = "Sur " . count($this->scores) . " parties : " . PHP_EOL;
         foreach ($this->stats as $key => $value) {
             $afficher .= "$key : $value" . PHP_EOL;
         }
