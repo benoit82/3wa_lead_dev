@@ -2,7 +2,7 @@
 
 require_once('./Calculator.php');
 
-function main(float $num1 = 1, float $num2 = 2, float ...$numbers)
+function main(float $num1 = 1, float $num2 = 2)
 {
     $calc = new Calculator;
 

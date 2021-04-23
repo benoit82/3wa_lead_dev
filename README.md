@@ -41,4 +41,4 @@
 
 ### Chapitre 4 : classes et objets
 
-- 01 : calculateur
+- 01 & 02 : calculateur
