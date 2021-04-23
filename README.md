@@ -24,10 +24,7 @@
 - 02 : tva sur prix pairs
 - 03 : reducer
 - 04 : hydratation & reducer
-
-#### TP
-
-- tri à bulle
+- TP : tri à bulle
 
 #### Chapitre 3 : generateur (yield)
 
