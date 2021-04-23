@@ -22,9 +22,9 @@ class Calculator
         return $a * $b;
     }
 
-    public function division(float $a, float $b): float
+    public function division(float $a, float $b): float | DivisionByZeroError
     {
-        if ((int) $b === 0) throw new DivideByZeroException("Impossible de diviser par zéro");
+        if ((int) $b === 0) throw new DivisionByZeroError("Impossible de diviser par zéro");
         return round($a / $b, $this->precision);
     }
 
