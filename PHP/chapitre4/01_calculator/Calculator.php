@@ -32,10 +32,10 @@ class Calculator
     {
         list($numbers, $operator) = $operation;
         return match (array_shift($operator)) {
-            "+" => $this->addition($numbers[0], $numbers[1]),
-            "-" => $this->soustraction($numbers[0], $numbers[1]),
-            "*" => $this->multiplication($numbers[0], $numbers[1]),
-            "/" => $this->division($numbers[0], $numbers[1]),
+            "+" => $this->addition(...$numbers),
+            "-" => $this->soustraction(...$numbers),
+            "*" => $this->multiplication(...$numbers),
+            "/" => $this->division(...$numbers),
             default => throw new Exception("Opérateur invalide."),
         };
     }
