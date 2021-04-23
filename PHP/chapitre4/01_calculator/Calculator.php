@@ -36,7 +36,7 @@ class Calculator
             "-" => $this->soustraction($numbers[0], $numbers[1]),
             "*" => $this->multiplication($numbers[0], $numbers[1]),
             "/" => $this->division($numbers[0], $numbers[1]),
-            default => throw new Exception("Opérateur invalid"),
+            default => throw new Exception("Opérateur invalide."),
         };
     }
 }
