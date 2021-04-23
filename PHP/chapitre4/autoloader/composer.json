@@ -1,0 +1,12 @@
+{
+    "name": "bntdb/autoloader",
+    "description": "exemples",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Benoit",
+            "email": "benoit.dubus@outlook.fr"
+        }
+    ],
+    "require": {}
+}
