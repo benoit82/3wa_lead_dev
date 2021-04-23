@@ -2,7 +2,7 @@
 
 require_once('./Calculator.php');
 
-function main(float $num1, float $num2)
+function main(float $num1 = 1, float $num2 = 2)
 {
     $calc = new Calculator($num1, $num2);
 
@@ -13,6 +13,6 @@ function main(float $num1, float $num2)
     echo "DIVISION : " . $calc->division() . PHP_EOL;
 }
 
-main(10, 2);
+main();
 echo "==========================" . PHP_EOL;
 main(26.2, 14.5);
