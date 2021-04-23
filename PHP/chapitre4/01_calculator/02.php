@@ -8,7 +8,7 @@ function main()
 
     $calculator = new Calculator;
 
-    $operation = [[11, 2], ["toto"]];
+    $operation = [[11, 2], ["+"]];
     try {
         echo $calculator->result($operation);
     } catch (Exception $e) {
