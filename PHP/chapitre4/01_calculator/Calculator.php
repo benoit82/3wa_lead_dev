@@ -3,28 +3,28 @@
 class Calculator
 {
     public function __construct(
-        public float $number1,
-        public float $number2,
+        private int $precision = 2
     ) {
     }
 
-    public function addition(): float
+    public function addition(float $a, float $b): float
     {
-        return $this->number1 + $this->number2;
+        return $a + $b;
     }
 
-    public function soustraction(): float
+    public function soustraction(float $a, float $b): float
     {
-        return $this->number1 - $this->number2;
+        return $a - $b;
     }
 
-    public function multiplication(): float
+    public function multiplication(float $a, float $b): float
     {
-        return $this->number1 * $this->number2;
+        return $a * $b;
     }
 
-    public function division(): float
+    public function division(float $a, float $b): float
     {
-        return $this->number1 / $this->number2;
+        if ((int) $b === 0) throw new DivideByZeroException("Impossible de diviser par zéro");
+        return round($a / $b, $this->precision);
     }
 }
