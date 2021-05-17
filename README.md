@@ -42,3 +42,11 @@
 ### Chapitre 4 : classes et objets
 
 - 01 & 02 : calculateur
+- ajout de l'auto-loader de Composer
+- TP :
+    - Bouton / Lampe
+    - Queue
+    - Jeu du YAM
+---
+## Semaine 2 : UML
+### Chapitre 1 : Use Case
