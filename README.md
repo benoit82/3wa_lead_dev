@@ -55,3 +55,5 @@
 - 01 : cas du distributeur
 - 02 : course au marché
 - 03 : sondage
+
+### [Chapitre 2 : Diagramme de classe](/week02_UML/02_diagramme_de_classe/Classes.md)
