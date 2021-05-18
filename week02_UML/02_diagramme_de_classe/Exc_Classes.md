@@ -11,7 +11,7 @@ Vous êtes responsable d'un magasin (disons un supermarché de quartier). Vous d
 * des produits frais (légumes, fruits, etc.)
 * des produits ménagers
 * des produits agro-alimentaires
-* divers typesde boissons (dont des alcools)
+* divers types de boissons (dont des alcools)
 * etc. ad libitum
 Construisez l'ensemble des classes qui vous permettront de décrire le stock.
 
