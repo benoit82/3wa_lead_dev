@@ -7,7 +7,6 @@
 - 05 : zipper
 - 06 : fizzbuzz
 - 07 : speed power (récursivité)
----
 ## Training algo :
 - 01 : nombre max dans un tableau
 - 02 : transformation
