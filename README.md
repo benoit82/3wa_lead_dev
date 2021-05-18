@@ -3,7 +3,6 @@
 ## Semaine 1 : PHP avancé
 
 ### Chapitre 1 : intro
-
 - Exemple 01 : Scope / porté de variable (ne marche pas pour l'exemple)
 - 01 : permutations de données
 - 02 : suite de fibonacci
@@ -14,7 +13,6 @@
 - 07 : speed power (récursivité)
 
 ##### Training algo :
-
 - 01 : nombre max dans un tableau
 - 02 : transformation
 - 03 : callable
@@ -22,7 +20,6 @@
 - 05 : tests (php unit fait maison)
 
 ### Chapitre 2 : closure
-
 - 01 : calcul de tva
 - 02 : tva sur prix pairs
 - 03 : reducer
@@ -30,7 +27,6 @@
 - TP : tri à bulle
 
 ### Chapitre 3 : generateur (yield)
-
 - 01 : generateur d'entier pair
 - 02 : xrange
 - 03 : read file
@@ -40,7 +36,6 @@
 - 07 : shop
 
 ### Chapitre 4 : classes et objets
-
 - 01 & 02 : calculateur
 - ajout de l'auto-loader de Composer
 - TP :
@@ -50,8 +45,7 @@
 ---
 ## Semaine 2 : UML
 
-### Chapitre 1 : Use Case
-
+### [Chapitre 1 : Use Case](/week02_UML/01_use_case/Exc_UseCase.md)
 - 01 : cas du distributeur
 - 02 : course au marché
 - 03 : sondage
