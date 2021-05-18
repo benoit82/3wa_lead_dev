@@ -49,4 +49,9 @@
     - Jeu du YAM
 ---
 ## Semaine 2 : UML
+
 ### Chapitre 1 : Use Case
+
+- 01 : cas du distributeur
+- 02 : course au marché
+- 03 : sondage
