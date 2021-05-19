@@ -8,4 +8,4 @@
 - 02 - travail en équipe (Zya / Djibril) : Produits en magasin
 - 03 - travail en équipe (Emmanuel / Gregory) : Ecole
 ---
-# Chapitre 3 : Diagramme de séquence
+# [Chapitre 3 : Diagramme de séquence](week02_UML/03_diagramme_de_sequence/Sequence.md)
