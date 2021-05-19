@@ -7,3 +7,5 @@
 - 01 : class Personne
 - 02 - travail en équipe (Zya / Djibril) : Produits en magasin
 - 03 - travail en équipe (Emmanuel / Gregory) : Ecole
+---
+# Chapitre 3 : Diagramme de séquence
