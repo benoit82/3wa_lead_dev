@@ -4,3 +4,6 @@
 - 03 : sondage
 ---
 # [Chapitre 2 : Diagramme de classe](/week02_UML/02_diagramme_de_classe/Classes.md)
+- 01 : class Personne
+- 02 - travail en équipe (Zya / Djibril) : Produits en magasin
+- 03 - travail en équipe (Emmanuel / Gregory) : Ecole
