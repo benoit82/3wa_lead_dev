@@ -11,3 +11,4 @@
 # [Chapitre 3 : Diagramme de séquence](week02_UML/03_diagramme_de_sequence/Sequence.md)
 - Exemple : BuySequence
 - 01 - travail en équipe (Camile, Gregory, Julien) : ATM, cas de distributeur de billet de banque
+- 02 - équipe (Gregory, Julien) : Inscription formation
