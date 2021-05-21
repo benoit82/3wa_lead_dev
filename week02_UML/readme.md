@@ -25,3 +25,4 @@ BuySequence
 
 ## Exercices
 - 01 - travail en équipe (Eric, Camile) : inscription formation
+... + travaux des 2 autres groupes pour l'exemple
