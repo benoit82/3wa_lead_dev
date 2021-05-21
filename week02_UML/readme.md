@@ -26,3 +26,6 @@ BuySequence
 ## Exercices
 - 01 - travail en équipe (Eric, Camile) : inscription formation
 ... + travaux des 2 autres groupes pour l'exemple
+---
+# [Chapitre 5 : Diagramme d'état fini](/week02_UML/05_diagramme_etat_fini/EtatsFinis.md)
+## Exemple
