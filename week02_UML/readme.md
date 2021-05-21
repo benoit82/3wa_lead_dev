@@ -12,7 +12,7 @@
 - Exemple : BuySequence
 - 01 - travail en équipe (Camile, Gregory, Julien) : ATM, cas de distributeur de billet de banque
 - 02 - équipe (Gregory, Julien) : Inscription formation
-
+---
 # [Chapitre 4 : Diagramme d'activité](/week02_UML/04_diagramme_activite/activite.md)
 - Exemples :
     - 01 & 02 : commande
