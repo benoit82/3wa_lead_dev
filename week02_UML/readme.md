@@ -1,5 +1,5 @@
 # [Chapitre 1 : Use Case](/week02_UML/01_use_case/Exc_UseCase.md)
-##Exercices :
+##Exercices
 - 01 : cas du distributeur
 - 02 : course au marché
 - 03 : sondage
