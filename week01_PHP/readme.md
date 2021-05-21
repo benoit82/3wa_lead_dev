@@ -1,5 +1,8 @@
 # Chapitre 1 : intro
-- Exemple 01 : Scope / porté de variable (ne marche pas pour l'exemple)
+## Exemple
+- Scope / porté de variable (ne marche pas pour l'exemple)
+
+## Exercices
 - 01 : permutations de données
 - 02 : suite de fibonacci
 - 03 : split array
@@ -7,7 +10,7 @@
 - 05 : zipper
 - 06 : fizzbuzz
 - 07 : speed power (récursivité)
-## Training algo :
+## Training algo (avec Lior Chamla)
 - 01 : nombre max dans un tableau
 - 02 : transformation
 - 03 : callable
@@ -15,6 +18,7 @@
 - 05 : tests (php unit fait maison)
 ---
 # Chapitre 2 : closure
+## Exercices
 - 01 : calcul de tva
 - 02 : tva sur prix pairs
 - 03 : reducer
@@ -31,9 +35,13 @@
 - 07 : shop
 ---
 # Chapitre 4 : classes et objets
+## Exercices
 - 01 & 02 : calculateur
+
+## TP
+- Bouton / Lampe
+- Queue
+- Jeu du YAM
+
+## Autre
 - ajout de l'auto-loader de Composer
-- TP :
-    - Bouton / Lampe
-    - Queue
-    - Jeu du YAM
