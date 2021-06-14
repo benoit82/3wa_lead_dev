@@ -2,7 +2,7 @@ Résumez le texte suivant :
 
 - en deux phrases
 
-1. Un touriste a fait un voyage pour Lyon pour admirer les derniers services des trolleybus de la ligne 6. Ces trolleybus sont des "remonte-pentes" qui relient les places des Terreau et la Croix-Rousse et vivent leurs derniers mois.
+1. Un touriste a fait un voyage pour Lyon pour admirer les derniers services des trolleybus de la ligne 6. Ces "remonte-pentes" qui relient les places des Terreau et la Croix-Rousse et vivent leurs derniers mois.
 
 - en une phrase
 
