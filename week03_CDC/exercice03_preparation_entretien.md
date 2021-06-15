@@ -6,7 +6,7 @@ J'ai un hôtel 3 étoiles de 50 chambres, j'aimerai faire un site internet pour 
 Il faudrait un site avec une page d'accueil, avec des photos de l'établissement, présentant nos prestations et une description de nos différents types de chambre, service :
 - single 1 personne
 - double / twin, 2 personnes
-- suite (salon avec canapé-lit + chambre double), 2 à 4 personnes
+- 2 suite (salon avec canapé-lit + chambre double), 2 à 4 personnes
 
 Tarification haute (été, periodes de fête) et basse saison
 
