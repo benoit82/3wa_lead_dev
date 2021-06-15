@@ -7,7 +7,7 @@ Il faudrait un site avec une page d'accueil, avec des photos de l'établissement
 - double / twin, 2 personnes
 - suite (salon avec canapé-lit + chambre double), 2 à 4 personnes
 
-Tarification haute et basse saison
+Tarification haute (été, periodes de fête) et basse saison
 
 Présenter également les services de l'hôtel :
 - acceuil et une conciergerie disponible 24h/24 7j/7
