@@ -4,3 +4,4 @@ Intervenant : Michel CADENNES
 ### Exercices
 - [01 - résumer un texte](/exercice01.md)
 - [02 - résumer un texte](/exercice02.md)
+- [03 - proposer un projet client](/exercice03.md)
