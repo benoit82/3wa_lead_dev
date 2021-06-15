@@ -1,3 +1,4 @@
+[Lien notion](https://www.notion.so/Exercice-CDC-7be6ab9eff36403992a65acbbf8666d8)
 # Outil de gestion d'un hôtel
 
 J'ai un hôtel 3 étoiles de 50 chambres, j'aimerai faire un site internet pour apporter de la visibilité à mon établissement et permettre aux visiteurs de réserver en ligne selon nos disponibilités.
