@@ -4,3 +4,4 @@
     - outil utilisé : PHP >= 8.0.3
 - [Semaine 2 : UML](/week02_UML/readme.md)
     - outil utilisé : StarUML >= 4.0.1
+- [Semaine 3 : Cahier Des Charges](/week03_CDC/readme.md)
