@@ -5,7 +5,7 @@ Intervenant : Michel CADENNES
 document transversale : le glossaire (non obligatoire)
 1. Definir les **enjeux** majeurs du projet :
 
-Pendant la réunion de cadrage : pitch, résumé, inconnues / risques, parties prenantes
+Pendant la réunion de cadrage : pitch, résumé / prérimètre, inconnues / risques, parties prenantes
     -> élaboration du document martyr, peux evoluer au fil du temps (des choses non identifié au départ par exemple)
     -> soumettre le document au client pour se mettre en accord
 
