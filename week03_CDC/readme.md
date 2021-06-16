@@ -4,13 +4,18 @@ Intervenant : Michel CADENNES
 ## Les étapes : enjeux, recueil, analyse, spécification, rédaction
 document transversale : le glossaire
 1. Definir les **enjeux** majeurs du projet :
-entretien avec le client pour cerner son besoin -> résumé
-Pendant la réunion de cadrage : pitch (= entretien), résumé, inconnues / risques, parties prenantes
-    -> élaboration du document martyr
+
+Pendant la réunion de cadrage : pitch, résumé, inconnues / risques, parties prenantes
+    -> élaboration du document martyr, peux evoluer au fil du temps (des choses non identifié au départ par exemple)
     -> soumettre le document au client pour se mettre en accord
+
 2. Phase de **recueil** :
     -> rencontrer les différents acteurs / utilisateurs pour obtenir des informations complémentaires sur le métier, sur le développement du projet
-2. Definir les différents acteurs, des scénarii
+entretien avec le client/les differents acteurs du projets pour cerner les besoins
+plusieurs types d'entretien : directif, non directif (inconnu du projet)
+but des entretiens : connaitre les exigences, fonctionnelles et non fonctionnelles (pas lié à un objectif d'un utilisateur), règles métiers, réglements (exemple : respect du RGPD dans le cadre d'une application web)
+
+3. Definir les différents acteurs, des scénarii
     -> [fiche Personae](https://docs.google.com/spreadsheets/d/1ekwyJFs5dGjKFjnt-GWBuDkh_6fLJfr2ukLBmWOVsEg/edit?usp=sharing)
 ### Exercices
 - [01 - résumer un texte](exercice01.md)
