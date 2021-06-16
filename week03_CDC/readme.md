@@ -19,6 +19,8 @@ but des entretiens : connaitre les exigences, fonctionnelles et non fonctionnell
 structurer et classer les exigences, assurer que la compréhension des besoins est partagée par les parties prenantes et réajuster.
 Structurer un dictionnaire des données
 Analyser les règles métier
+production possible de cas d'utilisation (user case)
+!! Si on est en Agile, on fat un cahier des charges minimal (on ne fait des choses que si on en a absolument besoin)
 
 Definir les différents acteurs, des scénarii
     -> [fiche Personae](https://docs.google.com/spreadsheets/d/1ekwyJFs5dGjKFjnt-GWBuDkh_6fLJfr2ukLBmWOVsEg/edit?usp=sharing)
