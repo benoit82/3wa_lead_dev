@@ -1,6 +1,7 @@
 # [Lien vers les documents / cours](https://e.3wa.fr/course/view.php?id=1751)
 Intervenant : Michel CADENNES
 ---
+[Exemple de gestion de projet, construction du cahier des charges](https://drive.google.com/file/d/1nVefiICeVJ7gGhlnvcJEfNkDUh_Epa18/view?usp=sharing)
 ## Les étapes : enjeux, recueil, ( -> peuvent être fait en paralèlle : analyse, spécification, rédaction)
 document transversale : le glossaire (non obligatoire)
 1. Definir les **enjeux** majeurs du projet :
