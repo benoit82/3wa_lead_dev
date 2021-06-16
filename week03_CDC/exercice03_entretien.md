@@ -19,3 +19,5 @@ Présenter également les services de l'hôtel :
 - parking disponible (payant)
 
 Il est possible de réserver sur toute l'année.
+
+[interview de Camile](https://www.notion.so/Camile-827f5a389d904485b47792798c8f6c58)

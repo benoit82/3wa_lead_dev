@@ -4,4 +4,4 @@ Intervenant : Michel CADENNES
 ### Exercices
 - [01 - résumer un texte](exercice01.md)
 - [02 - résumer un texte](exercice02.md)
-- [03 - preparation entretien pour faire un cahier des charges](exercice03_preparation_entretien.md)
+- [03 - preparation entretien pour faire un cahier des charges](exercice03_entretien.md)
