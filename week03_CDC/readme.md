@@ -1,5 +1,7 @@
 # [Lien vers les documents / cours](https://e.3wa.fr/course/view.php?id=1751)
-Intervenant : Michel CADENNES
+Intervenant : 
+- Michel CADENNES
+- Jean-Luc
 ---
 [Exemple de gestion de projet, construction du cahier des charges](https://drive.google.com/file/d/1nVefiICeVJ7gGhlnvcJEfNkDUh_Epa18/view?usp=sharing)
 ## Les étapes : enjeux, recueil, ( -> peuvent être fait en paralèlle : analyse, spécification, rédaction)
@@ -29,3 +31,9 @@ Definir les différents acteurs, des scénarii
 - [01 - résumer un texte](exercice01.md)
 - [02 - résumer un texte](exercice02.md)
 - [03 - preparation entretien pour faire un cahier des charges](exercice03_entretien.md)
+
+
+---
+
+Le cahier des charges est aussi une soutenance d'appel d'offre par le directeur technique (grosse structure surtout) ou responsable technique (ou lead dev)
+Le cahier des charges doit être précis -> base de la collaboration qui découle le bon de commande du client.
