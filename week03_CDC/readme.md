@@ -38,4 +38,5 @@ Definir les différents acteurs, des scénarii
 Le cahier des charges est aussi une soutenance d'appel d'offre par le directeur technique (grosse structure surtout) ou responsable technique (ou lead dev)
 Le cahier des charges doit être précis -> base de la collaboration qui découle le bon de commande du client.
 
-- [04 - le festival](exercice04_grp_eric_benoit_julien_zya.md)
+- [04 - le festival](./exercice04_festival/exercice04_grp_eric_benoit_julien_zya.md)
+* [05 - travail de groupe : wireframe (maquettage de site)](./exercice05_maquettage/wireframe.md)
