@@ -40,3 +40,7 @@ Le cahier des charges doit être précis -> base de la collaboration qui découl
 
 - [04 - le festival](./exercice04_festival/exercice04_grp_eric_benoit_julien_zya.md)
 * [05 - travail de groupe : wireframe (avant-maquettage de site)](./exercice05_wireframe/wireframe.md)
+
+---
+
+[Aide trouvé : video YouTube](https://www.youtube.com/watch?v=dbjDhyfJHVQ)
