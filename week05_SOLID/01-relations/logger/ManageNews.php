@@ -9,6 +9,6 @@ class ManageNews
     {
         $this->title = $title;
         $this->log = $log;
-        Log::addLog($this->title);
+        $this->log::addLog($this->title);
     }
 }
