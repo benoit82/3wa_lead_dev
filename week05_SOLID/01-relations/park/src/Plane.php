@@ -5,12 +5,7 @@ use \Park\Vehicule;
 
 final class Plane extends Vehicule {
     protected string $category;
-    static private float $speed;
-
-    public function __construct(string $name)
-    {
-        parent::__construct($name);
-    }
+    static private string $speed;
 
     private function setCaterogy(string $category):void {
         $this->category = $category;
@@ -18,14 +13,14 @@ final class Plane extends Vehicule {
 
     public function __toString()
     {
-        echo "Name: {$this->name}, Engine: {$this->engine}, Status: {$this->status}, Category: {$this->category}";
+        return "Name: {$this->name}, Engine: {$this->engine}, Status: {$this->status}, Category: {$this->category}";
     }
 
-    private static function setSpeed(float $speed): void {
-        Plane::$speed = $speed;
+    public static function setSpeed(float $speed): void {
+        self::$speed = $speed;
     }
 
     public function speed(): float {
-        return Plane::$speed;
+        return self::$speed;
     }
 }

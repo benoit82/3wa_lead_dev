@@ -1,33 +1,27 @@
 <?php
 
 namespace Park;
-use \Park\Vehicule;
 
 final class Car extends Vehicule {
+    
     protected string $park;
-    private string $place;
-    static private float $speed;
+    static private string $speed;
 
-    public function __construct(string $name)
+    public function park(string $address, $place): void {
+        $this->park = $address . ", place: " . $place;
+    }
+
+    public function __toString(): string
     {
-        parent::__construct($name);
+        return "Name: {$this->name}, Engine: {$this->engine}, Status: {$this->status}, Park address: {$this->park}";
     }
 
-    private function park(string $name, $place):void {
-
-    }
-
-    public function __toString()
-    {
-        echo "Name: {$this->name}, Engine: {$this->engine}, Status: {$this->status}, Park address: {$this->park}";
-    }
-
-    private static function setSpeed(float $speed): void {
-        Car::$speed = $speed;
+    public static function setSpeed(float $speed): void {
+        self::$speed = $speed;
     }
 
     public function speed(): float {
-        return Car::$speed;
+        return self::$speed;
     }
 
 }
