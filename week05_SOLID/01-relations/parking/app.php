@@ -2,7 +2,7 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-use Parking\{Car, Byke, Parking, Plane};
+use Parking\{Car, Byke, Parking, Plane, Ferry};
 
 Car::setSpeed(180);
 Plane::setSpeed(890.5);
@@ -22,4 +22,10 @@ try {
     echo $e->getMessage();
 }
 
+echo $parking . "\n";
+
+$ferry = new Ferry($parking);
+
+$telsa = new Car('tesla');
+$parking->addPark($telsa);
 echo $parking . "\n";

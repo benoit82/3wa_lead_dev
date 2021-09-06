@@ -35,4 +35,8 @@ class Parking
         }
         return $str;
     }
+
+    public function getAll() {
+        
+    }
 }
