@@ -1,0 +1,15 @@
+{
+  "name": "bntdb/parking",
+  "authors": [
+    {
+      "name": "Benoit",
+      "email": "benoit.dubus@outlook.fr"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Parking\\": "src/"
+    }
+  }
+}
