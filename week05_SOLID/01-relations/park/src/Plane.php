@@ -1,7 +1,6 @@
 <?php
 
 namespace Park;
-use \Park\Vehicule;
 
 final class Plane extends Vehicule {
     protected string $category;

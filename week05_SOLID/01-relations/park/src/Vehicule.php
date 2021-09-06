@@ -3,9 +3,9 @@
 namespace Park;
 
 abstract class Vehicule {
-    private $name;
-    private $status;
-    private $engine;
+    private string $name = '';
+    private string $status = '';
+    private string $engine = '';
 
     public function __construct(string $name)
     {
