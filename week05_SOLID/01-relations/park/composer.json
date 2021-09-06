@@ -1,0 +1,13 @@
+{
+  "name": "bntdb/park",
+  "authors": [
+    {
+      "name": "Benoit",
+      "email": "benoit.dubus@outlook.fr"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": { "Park\\": "src/" }
+  }
+}
