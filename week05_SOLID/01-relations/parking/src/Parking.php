@@ -26,8 +26,9 @@ class Parking
 
     public function __toString(): string
     {
-        $str = '';
+        $str = PHP_EOL;
         if (count($this->park) > 0) {
+            $str .= "Listing des véhicules :" . PHP_EOL;
             foreach ($this->park as $vehicule) {
                 $str .= $vehicule->getName() . PHP_EOL;
             }
