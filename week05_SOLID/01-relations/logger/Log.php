@@ -1,13 +1,11 @@
 <?php
 
-namespace Logger;
-
 class Log {
     static private array $storage;
-    static private int $count;
+    static private int $count = 0;
 
-    static public function addLog(string $date): void {
-        array_push(self::$storage, $date);
+    static public function addLog(string $title): void {
+        self::$storage[] = (new DateTime())->format('d/m/y H:m:s') . " : " . $title;
         self::$count++;
     }
 

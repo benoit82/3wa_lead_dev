@@ -1,16 +1,14 @@
 <?php
 
-namespace Logger;
-
-use Logger\Log;
-
 class ManageNews
 {
     private string $title;
+    private Log $log;
 
     public function __construct(Log $log, string $title)
     {
         $this->title = $title;
-        $log->addLog("Date? : " . $this->title);
+        $this->log = $log;
+        Log::addLog($this->title);
     }
 }
