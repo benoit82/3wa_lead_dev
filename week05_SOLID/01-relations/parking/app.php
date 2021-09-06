@@ -15,6 +15,7 @@ $airbus = new Plane('airbus 320');
 $parking = new Parking();
 $parking->addPark($brompton);
 $parking->addPark($kia);
+
 try {
     $parking->addPark($airbus); // exception
 
