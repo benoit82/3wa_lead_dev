@@ -6,3 +6,4 @@
     - outil utilisé : StarUML >= 4.0.1
 - [Semaine 3 : Cahier Des Charges](/week03_CDC/readme.md)
 - [Semaine 4 : Méthodes AGILE](/week04_AGILE/week04.md)
+- - [Semaine 4 : SOLID](/week05_SOLID/readme.md)
