@@ -9,6 +9,11 @@ class Byke extends Vehicule implements Parkable
     private float $pay;
     private string $park;
 
+    public function __construct($name)
+    {
+        parent::__construct($name);
+    }
+
     static public function setSpeed(float $s): void
     {
         self::$speed = $s;

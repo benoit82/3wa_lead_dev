@@ -9,6 +9,7 @@ class Parking
 
     public function addPark(Parkable $parkable): void
     {
+        $parkable->pay(10);
         $this->park[] = $parkable;
         self::$count++;
     }
@@ -28,7 +29,7 @@ class Parking
         $str = '';
         if (count($this->park) > 0) {
             foreach ($this->park as $vehicule) {
-                $str .= $vehicule->getName() . "    ";
+                $str .= $vehicule->getName() . PHP_EOL;
             }
         }
         return $str;
