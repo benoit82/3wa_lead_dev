@@ -13,11 +13,12 @@ $kia = new Car('kia');
 $airbus = new Plane('airbus 320');
 
 $parking = new Parking();
+
+try {
 $parking->addPark($brompton);
 $parking->addPark($kia);
 
-try {
-    $parking->addPark($airbus); // exception
+    // $parking->addPark($airbus); // exception
 
 } catch (TypeError $e) {
     echo $e->getMessage();
