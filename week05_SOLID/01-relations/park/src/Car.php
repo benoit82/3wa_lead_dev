@@ -2,12 +2,14 @@
 
 namespace Park;
 
-final class Car extends Vehicule {
-    
+final class Car extends Vehicule
+{
+
     protected string $park;
     static private string $speed;
 
-    public function park(string $address, $place): void {
+    public function park(string $address, $place): void
+    {
         $this->park = $address . ", place: " . $place;
     }
 
@@ -16,12 +18,13 @@ final class Car extends Vehicule {
         return "Name: {$this->name}, Engine: {$this->engine}, Status: {$this->status}, Park address: {$this->park}";
     }
 
-    public static function setSpeed(float $speed): void {
+    public static function setSpeed(float $speed): void
+    {
         self::$speed = $speed;
     }
 
-    public function speed(): float {
+    public function speed(): float
+    {
         return self::$speed;
     }
-
 }

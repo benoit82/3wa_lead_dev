@@ -2,7 +2,8 @@
 
 namespace Park;
 
-abstract class Vehicule {
+abstract class Vehicule
+{
     private string $name = '';
     private string $status = '';
     private string $engine = '';
@@ -15,10 +16,12 @@ abstract class Vehicule {
     abstract public function speed(): float;
     abstract public function __toString(): string;
 
-    public function setStatus(string $status): void {
+    public function setStatus(string $status): void
+    {
         $this->status = $status;
     }
-    public function setEngine(string $engine): void {
+    public function setEngine(string $engine): void
+    {
         $this->engine = $engine;
     }
 }

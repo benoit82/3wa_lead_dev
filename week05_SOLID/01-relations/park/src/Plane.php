@@ -2,11 +2,13 @@
 
 namespace Park;
 
-final class Plane extends Vehicule {
+final class Plane extends Vehicule
+{
     protected string $category;
     static private string $speed;
 
-    private function setCaterogy(string $category):void {
+    private function setCaterogy(string $category): void
+    {
         $this->category = $category;
     }
 
@@ -15,11 +17,13 @@ final class Plane extends Vehicule {
         return "Name: {$this->name}, Engine: {$this->engine}, Status: {$this->status}, Category: {$this->category}";
     }
 
-    public static function setSpeed(float $speed): void {
+    public static function setSpeed(float $speed): void
+    {
         self::$speed = $speed;
     }
 
-    public function speed(): float {
+    public function speed(): float
+    {
         return self::$speed;
     }
 }

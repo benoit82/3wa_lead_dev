@@ -14,10 +14,12 @@ class Byke extends Vehicule implements Parkable
         self::$speed = $s;
     }
 
-    public function pay(float $price): void {
+    public function pay(float $price): void
+    {
         $this->pay = $price;
     }
-    public function park(string $address, string $place): void {
-        $this->park = $address . " @". $place . PHP_EOL;
+    public function park(string $address, string $place): void
+    {
+        $this->park = $address . " @" . $place . PHP_EOL;
     }
 }
