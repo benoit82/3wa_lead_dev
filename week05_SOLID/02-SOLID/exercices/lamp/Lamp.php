@@ -16,6 +16,6 @@ class Lamp
 
     public function __toString(): string
     {
-        return "La lampe est " . ($this->light->getStatus() ? "allumé" : "éteinte") . PHP_EOL;
+        return "La lampe est : " . ($this->light->getStatus() ? "ON" : "OFF") . PHP_EOL;
     }
 }
