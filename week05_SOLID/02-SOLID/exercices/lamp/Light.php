@@ -7,7 +7,7 @@ class Light
     /**
      * Get the value of status
      *
-     * @return  mixed
+     * @return  bool
      */
     public function getStatus()
     {
@@ -17,11 +17,11 @@ class Light
     /**
      * Set the value of status
      *
-     * @param   mixed  $status  
+     * @param   bool  $status  
      *
      * @return  self
      */
-    public function setStatus($status)
+    public function setStatus(bool $status)
     {
         $this->status = $status;
 
