@@ -3,11 +3,15 @@ Intervenant : Antoine
 
 Héritage : couplage fort, seulement si "cette classe EST (ou UNE SORTE DE) tel autre classe."
 
-## Partie 1 : relations
+## Partie 01 : relations
 * [exercice 01 : park](./01-relations/park)
 * [exercice 02 : logger / ManagerNews](./01-relations/logger)
 * [exercice 03 : parking (synthèse)](./01-relations/parking)
 
-## Partie 2 : SOLID
-* [exercice 01 : lamp](./02-SOLID/exercices/lamp)
-* [exercice 02 : tools](./02-SOLID/exercices/tools)
+## Partie 02 : SOLID
+### 01 - Single Responsability
+* [exercice 01 : lamp](./02-SOLID/01-S-ingle-responsability/exercices/lamp)
+* [exercice 02 : tools](./02-SOLID/01-S-ingle-responsability/exercices/tools)
+
+### 02 - Open/Close
+* [exercice 01 : ](./02-SOLID/01-S-ingle-responsability/exercices/)
