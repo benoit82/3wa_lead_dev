@@ -14,4 +14,4 @@ Héritage : couplage fort, seulement si "cette classe EST (ou UNE SORTE DE) tel 
 * [exercice 02 : tools](./02-SOLID/01-S-ingle-responsability/exercices/tools)
 
 ### 02 - Open/Close
-* [exercice 01 : shipping](./02-SOLID/01-S-ingle-responsability/exercices/shipping)
+* [exercice 01 : shipping](./02-SOLID/02-O-pen-close/exercices/shipping)
