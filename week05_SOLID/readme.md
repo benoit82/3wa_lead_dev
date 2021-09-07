@@ -16,7 +16,8 @@ Héritage : couplage fort, seulement si "cette classe EST (ou UNE SORTE DE) tel 
 ### 02 - Open/Close
 * [exercice 01 : shipping](./02-SOLID/02-O-pen-close/exercices/shipping)
 
-### 03 -Liskov substitution
-* [exercice 01 : cart](./02-SOLID/03-L-iskov/exercices/cart)
-### 04 - Dependency injection
+### 03 -Liskov substitution (voir cours)
+### 04 - Interface segregation
+* [exercice 01 : cart](./02-SOLID/04-I-nterface-segregation/exercices/cart)
+### 05 - Dependency injection
 * [exercice 01 : ](./02-SOLID/04-D-ependency-injection/exercices/)
