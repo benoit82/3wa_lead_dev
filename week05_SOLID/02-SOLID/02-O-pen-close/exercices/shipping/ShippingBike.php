@@ -9,6 +9,6 @@ class ShippingBike extends Shipping
 
     public function getCost(Order $order): float
     {
-        return 12345;
+        return $order->cost();
     }
 }
