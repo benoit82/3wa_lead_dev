@@ -36,5 +36,5 @@ $alan->setInterest($container->getStorage('DATA'));
 var_dump($container->getStorage('DATA')); // retourne un intéret dans le container
 
 echo "\n";
-$alan->getInterests();
+echo $alan->getInterests();
 echo "\n";
