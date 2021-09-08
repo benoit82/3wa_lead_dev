@@ -6,7 +6,7 @@ class StorageSession implements Storable
 {
     public function setValue(string $name, float $price): void
     {
-        $_SESSION['cart'][$name] = $price;
+        $_SESSION['cart'][$name] = ['value' => $price];
     }
     public function reset(): void
     {
@@ -14,7 +14,9 @@ class StorageSession implements Storable
     }
     public function total(): float
     {
-        return array_sum($_SESSION['cart']);
+        return array_reduce($_SESSION['cart'], function ($sum, $item) {
+            return $sum += $item['value'];
+        }, 0.0);
     }
     public function restore(string $name): void
     {

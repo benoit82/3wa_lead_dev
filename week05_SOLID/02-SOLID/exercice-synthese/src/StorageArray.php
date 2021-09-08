@@ -9,7 +9,7 @@ class StorageArray implements Storable
     }
     public function setValue(string $name, float $price): void
     {
-        $this->store[$name] = $price;
+        $this->store[$name] = ['value' => $price];
     }
     public function reset(): void
     {
@@ -17,7 +17,9 @@ class StorageArray implements Storable
     }
     public function total(): float
     {
-        return array_sum($this->store);
+        return array_reduce($this->store, function($sum, $item) {
+            return $sum += $item['value'];
+        },0.0);
     }
     public function restore(string $name): void
     {

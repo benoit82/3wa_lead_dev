@@ -13,7 +13,7 @@ $products = [
 ];
 
 $storageArray =  new StorageArray;
-$cart = new Cart(tva: 0.2, storage: $storageArray);
+$cart = new Cart(tva: 0.05, storage: $storageArray);
 
 extract($products);
 

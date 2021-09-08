@@ -12,7 +12,7 @@ class Cart
 
     public function buy(Productable $prod, int $qte)
     {
-        $ttc = $prod->getPrice() * (1 + $this->tva) * $qte;
+        $ttc = round(($prod->getPrice() * (1 + $this->tva) * $qte), 2);
         $this->storage->setValue($prod->getName(), $ttc);
     }
 
