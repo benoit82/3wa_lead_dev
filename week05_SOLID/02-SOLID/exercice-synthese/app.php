@@ -1,6 +1,6 @@
 <?php
 
-use CartSystem\{Product, Cart, StorageArray};
+use CartSystem\{Product, Cart, StorageArray, StorageSession};
 
 require_once __DIR__ . '/vendor/autoload.php';
 
@@ -12,8 +12,10 @@ $products = [
     'orange' => new Product('orange', 7.5),
 ];
 
-$storageArray =  new StorageArray;
-$cart = new Cart(tva: 0.05, storage: $storageArray);
+// $storageArray =  new StorageArray;
+// $cart = new Cart(tva: 0.05, storage: $storageArray);
+$storageSession =  new StorageSession;
+$cart = new Cart(tva: 0.05, storage: $storageSession);
 
 extract($products);
 
