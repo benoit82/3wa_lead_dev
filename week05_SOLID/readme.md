@@ -21,4 +21,4 @@ Héritage : couplage fort, seulement si "cette classe EST (ou UNE SORTE DE) tel 
 ### 04 - Interface segregation
 * [exercice 01 : cart](./02-SOLID/04-I-nterface-segregation/exercices/cart)
 ### 05 - Dependency injection
-* [exercice 01 : ](./02-SOLID/05-D-ependency-injection/exercices/)
+* [exercice 01 : interest](./02-SOLID/05-D-ependency-injection/exercices/interest)
