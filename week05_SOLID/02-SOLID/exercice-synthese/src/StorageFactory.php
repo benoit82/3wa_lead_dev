@@ -6,6 +6,10 @@ use Exception;
 
 class StorageFactory
 {
+    private function __construct()
+    {
+    }
+
     public static function create(string $name = "array")
     {
         return match (strtolower($name)) {
