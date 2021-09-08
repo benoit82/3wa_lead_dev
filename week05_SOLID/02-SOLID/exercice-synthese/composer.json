@@ -2,7 +2,7 @@
     "name": "benoit/solid",
     "autoload": {
         "psr-4": {
-            "": "src/"
+            "CartSystem\\": "src/"
         }
     },
     "authors": [
