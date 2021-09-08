@@ -4,6 +4,16 @@ namespace CartSystem;
 
 class StorageSession implements Storable
 {
+    public function __construct()
+    {
+        if (empty($_SESSION))
+            session_start();
+        // initialise les sessions si elle vide on crée un tableau vide
+        // pour ranger nos valeurs dans le storage
+        if (empty($_SESSION['cart']))
+            $_SESSION['cart'] = [];
+    }
+
     public function setValue(string $name, float $price): void
     {
         $_SESSION['cart'][$name] = ['value' => $price];
