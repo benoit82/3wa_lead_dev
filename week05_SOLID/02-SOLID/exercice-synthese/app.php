@@ -12,8 +12,8 @@ $products = [
     'orange' => new Product('orange', 7.5),
 ];
 
-$storageSession =  new StorageArray;
-$cart = new Cart($storageSession);
+$storageArray =  new StorageArray;
+$cart = new Cart(tva: 0.2, storage: $storageArray);
 
 extract($products);
 
