@@ -7,16 +7,16 @@ class Container
 
     public function setStorage(Interest $interest, string $name)
     {
-        // interêt de la variable $name ?
-        $this->storage->attach($interest);
+        if ($this->storage->contains($interest)) throw new InvalidArgumentException("This interest exists");
+        $this->storage->attach($interest, $name);
     }
 
     public function getStorage(string $name): Interest
     {
-        foreach ($this->storage as $k => $interest) {
-            if ($interest->getName() === $name) {
-                return $interest;
-            }
+        $this->storage->rewind();
+        while ($this->storage->valid()) {
+            if ($this->storage->getInfo() === $name) return $this->storage->current();
+            $this->storage->next();
         }
     }
 }
