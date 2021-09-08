@@ -13,7 +13,7 @@ $products = [
 ];
 
 try {
-    $store = StorageFactory::create("session");
+    $store = StorageFactory::create();
     $cart = new Cart(tva: 0.05, storage: $store);
 
     extract($products);
