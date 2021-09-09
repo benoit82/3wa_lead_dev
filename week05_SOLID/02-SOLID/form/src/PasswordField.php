@@ -12,7 +12,7 @@ class PasswordField extends Input implements Storable
         $str = "<label>" . $this->label;
         $str .= "<input type=\"" . self::$type . "\" name=\"{$this->name}\" ";
         $str .= "value=\"{$this->value}\" ";
-        $str .= "minlength=\"{$this->minLength}\" ";
+        $str .= "minlength=\"{$this->minLenght}\" ";
         if (count($this->class) > 0) $str .= "class=\"{$this->classToString()}\"";
         $str .= $this->isRequired ? " required" : "";
         $str .= " /></label>";

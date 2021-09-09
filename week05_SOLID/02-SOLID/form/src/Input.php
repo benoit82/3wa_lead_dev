@@ -5,11 +5,11 @@ namespace Form;
 abstract class Input
 {
     public function __construct(
-        private string $name,
-        private string $label,
-        private string $value,
-        private array $class = [],
-        private bool $isRequired = false,
+        protected string $name,
+        protected string $label,
+        protected string $value,
+        protected array $class = [],
+        protected bool $isRequired = false,
     ) {
     }
 
