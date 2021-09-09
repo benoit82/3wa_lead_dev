@@ -8,8 +8,7 @@ class SubmitInput extends Input
 
     public function toHtml(): string
     {
-        $str = "<input type=\"" . self::$type . "\" ";
-        $str .= "<input type=\"" . self::$type . "\" name=\"{$this->name}\" ";
+        $str = "<input type=\"" . self::$type . "\" name=\"{$this->name}\" ";
         $str .= "value=\"{$this->label}\" ";
         if (count($this->class) > 0) $str .= "class=\"{$this->classToString()}\"";
         $str .= " />";
