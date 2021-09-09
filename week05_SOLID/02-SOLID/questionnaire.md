@@ -13,7 +13,7 @@ class User {
 
 class Store {
     public function __construct(private ConnectDB $connect){}
-       public function saveUser(User $user) {
+       public function store(User $user) {
            // Store attributes into a database...
     }
     // ...
