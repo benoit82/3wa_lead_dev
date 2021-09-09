@@ -1,0 +1,15 @@
+{
+    "name": "benoit/form",
+    "autoload": {
+        "psr-4": {
+            "Form\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Benoit Dubus",
+            "email": "benoit.dubus@3wa.io"
+        }
+    ],
+    "require": {}
+}

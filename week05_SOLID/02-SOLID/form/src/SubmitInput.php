@@ -1,0 +1,18 @@
+<?php
+
+namespace Form;
+
+class SubmitInput extends Input
+{
+    static string $type = "submit";
+
+    public function toHtml(): string
+    {
+        $str = "<input type=\"" . self::$type . "\" ";
+        $str += "<input type=\"" . self::$type . "\" name=\"{$this->name}\" id=\"{$this->id}\" ";
+        $str += "value=\"{$this->label}\" ";
+        if (count($this->class) > 0) $str += "class=\"{$this->classToString()}\"";
+        $str += " />";
+        return $str;
+    }
+}
