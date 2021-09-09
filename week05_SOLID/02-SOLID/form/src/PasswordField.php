@@ -9,8 +9,8 @@ class PasswordField extends Input implements Storable
 
     public function toHtml(): string
     {
-        $str = "<label for=\"{$this->id}\">" . $this->label;
-        $str += "<input type=\"" . self::$type . "\" name=\"{$this->name}\" id=\"{$this->id}\" ";
+        $str = "<label>" . $this->label;
+        $str += "<input type=\"" . self::$type . "\" name=\"{$this->name}\" ";
         $str += "value=\"{$this->value}\" ";
         $str += "minlength=\"{$this->minLength}\" ";
         if (count($this->class) > 0) $str += "class=\"{$this->classToString()}\"";

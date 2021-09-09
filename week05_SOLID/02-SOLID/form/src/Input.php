@@ -8,7 +8,6 @@ abstract class Input
         private string $name,
         private string $label,
         private string $value,
-        private string $id,
         private array $class = [],
         private bool $isRequired = false,
     ) {
@@ -97,29 +96,6 @@ abstract class Input
         return $this;
     }
 
-    /**
-     * Get the value of id
-     *
-     * @return  mixed
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Set the value of id
-     *
-     * @param   mixed  $id  
-     *
-     * @return  self
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-
-        return $this;
-    }
 
     /**
      * Get the value of class
