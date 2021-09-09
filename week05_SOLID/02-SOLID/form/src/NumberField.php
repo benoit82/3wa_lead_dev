@@ -5,16 +5,16 @@ namespace Form;
 class NumberField extends Input implements Storable
 {
     static string $type = "number";
-    private int $min = 0;
-    private int $max = 100;
+    private int $min;
+    private int $max;
 
     public function toHtml(): string
     {
         $str = "<label for=\"{$this->id}\">" . $this->label;
         $str += "<input type=\"" . self::$type . "\" name=\"{$this->name}\" id=\"{$this->id}\" ";
         $str += "value=\"{$this->value}\" ";
-        $str += "min=\"{$this->min}\"";
-        $str += "max=\"{$this->max}\"";
+        if (isset($this->min)) $str += "min=\"{$this->min}\"";
+        if (isset($this->max)) $str += "max=\"{$this->max}\"";
         if (count($this->class) > 0) $str += "class=\"{$this->classToString()}\"";
         $str += $this->isRequired ? " required" : "";
         $str += " /></label>";
