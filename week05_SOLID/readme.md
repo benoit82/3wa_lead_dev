@@ -23,3 +23,4 @@ Héritage : couplage fort, seulement si "cette classe EST (ou UNE SORTE DE) tel 
 ### 05 - Dependency injection
 * [exercice 01 : interest](./02-SOLID/05-D-ependency-injection/exercices/interest)
 ### [Exercice de synthèse](./02-SOLID/exercice-synthese)
+### [Questionnaire](./02-SOLID/questionnaire.md)
