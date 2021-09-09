@@ -17,7 +17,7 @@ abstract class Input
     {
         $str = '';
         foreach ($this->class as $c) {
-            $str += "{$c} ";
+            $str .= "{$c} ";
         }
         return trim($str);
     }

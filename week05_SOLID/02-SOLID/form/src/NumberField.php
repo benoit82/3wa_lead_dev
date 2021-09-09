@@ -11,13 +11,13 @@ class NumberField extends Input implements Storable
     public function toHtml(): string
     {
         $str = "<label for=\"{$this->id}\">" . $this->label;
-        $str += "<input type=\"" . self::$type . "\" name=\"{$this->name}\" ";
-        $str += "value=\"{$this->value}\" ";
-        if (isset($this->min)) $str += "min=\"{$this->min}\"";
-        if (isset($this->max)) $str += "max=\"{$this->max}\"";
-        if (count($this->class) > 0) $str += "class=\"{$this->classToString()}\"";
-        $str += $this->isRequired ? " required" : "";
-        $str += " /></label>";
+        $str .= "<input type=\"" . self::$type . "\" name=\"{$this->name}\" ";
+        $str .= "value=\"{$this->value}\" ";
+        if (isset($this->min)) $str .= "min=\"{$this->min}\"";
+        if (isset($this->max)) $str .= "max=\"{$this->max}\"";
+        if (count($this->class) > 0) $str .= "class=\"{$this->classToString()}\"";
+        $str .= $this->isRequired ? " required" : "";
+        $str .= " /></label>";
         return $str;
     }
 
