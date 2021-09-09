@@ -1,10 +1,6 @@
 <?php
 
-use Form\ComponentForm;
-use Form\NumberField;
-use Form\PasswordField;
-use Form\SubmitInput;
-use Form\TextField;
+use Form\{ComponentForm, NumberField, PasswordField, SubmitInput, TextField};
 
 require_once __DIR__ . '/vendor/autoload.php';
 
@@ -16,7 +12,7 @@ $firstName = new TextField("fName", "Firstname", "");
 $form->addToStorage($firstName);
 
 $lastName = new TextField("lName", "Lastname", "");
-$lastName->setClass(["test","allo"]);
+$lastName->setClass(["test", "allo"]);
 $form->addToStorage($lastName);
 
 $age = new NumberField("age", "Age", "");
