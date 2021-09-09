@@ -16,6 +16,7 @@ $firstName = new TextField("fName", "Firstname", "");
 $form->addToStorage($firstName);
 
 $lastName = new TextField("lName", "Lastname", "");
+$lastName->setClass(["test","allo"]);
 $form->addToStorage($lastName);
 
 $age = new NumberField("age", "Age", "");
