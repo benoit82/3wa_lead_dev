@@ -8,7 +8,7 @@ Répondez en choisissant une seule et bonne réponse ci-dessous.
 
 [] Oui 
 
-[] Non
+[X] Non
 
 2. Combien de responsabilité pouvons-nous définir à partir de la classe "spaghetti" ci-après ? 
 
@@ -17,7 +17,7 @@ Répondez en choisissant une seule et bonne réponse ci-dessous.
 
 [] 1
 
-[] 2
+[X] 2
 
 [] 3
 
@@ -52,7 +52,7 @@ Répondez en choisissant une seule et bonne réponse ci-dessous.
 
 [] S
 
-[] O
+[X] O
 
 [] L
 
@@ -73,7 +73,7 @@ Répondez en choisissant une seule et bonne réponse ci-dessous.
 
 [] O
 
-[] L
+[X] L
 
 [] I
 
@@ -87,7 +87,7 @@ A quelle lettre le principe suivant correspont-il ?
 
 Répondez en choisissant une seule et bonne réponse ci-dessous.
 
-[] S
+[X] S
 
 [] O
 
@@ -111,7 +111,7 @@ Répondez en choisissant une seule et bonne réponse ci-dessous.
 
 [] L
 
-[] I
+[X] I
 
 [] D
 
@@ -132,11 +132,15 @@ Répondez en choisissant une seule et bonne réponse ci-dessous.
 
 [] I
 
-[] D
+[X] D
 
 ## Question 07
 
 Est-ce que la classe suivante brise le principe de Liskov ?
+
+[] Oui
+
+[X] Non
 
 Répondez en choisissant une seule et bonne réponse ci-dessous.
 
@@ -207,7 +211,7 @@ class Cart{
 
 [] On doit définir un contrat que la classe StorageSession doit implémenter.
 
-[] On doit définir un contrat pour la classe StorageSession et l'utiliser comme type pour la variable storage.
+[X] On doit définir un contrat pour la classe StorageSession et l'utiliser comme type pour la variable storage.
 
 ## Question 09
 
@@ -219,7 +223,7 @@ Répondez en choisissant une seule et bonne réponse ci-dessous.
 
 [] Une relation très faible entre la classe B et la classe A.
 
-[] La classe B est fortement liée à la classe A.
+[X] La classe B est fortement liée à la classe A.
 
 [] La classe A est fortement liée à la classe B.
 
@@ -229,7 +233,7 @@ Qu'impose le mot clé final dans l'héritage ?
 
 Répondez en choisissant une seule et bonne réponse ci-dessous.
 
-[] Il termine l'arbre d'héritage, sans possibilité de continuer l'héritage.
+[X] Il termine l'arbre d'héritage, sans possibilité de continuer l'héritage.
 
 [] Il termine l'arbre d'héritage, avec la possibilité de continuer l'héritage.
 
@@ -243,7 +247,7 @@ Quel est le symbole pour exprimer la visibilité **private**.
 
 Répondez en choisissant une seule et bonne réponse ci-dessous.
 
-[] -
+[X] -
 
 [] +
 
@@ -257,7 +261,7 @@ Répondez en choisissant une seule et bonne réponse ci-dessous.
 
 [] -
 
-[] +
+[X] +
 
 [] #
 
@@ -271,7 +275,7 @@ Répondez en choisissant une seule et bonne réponse ci-dessous.
 
 [] +
 
-[] #
+[X] #
 
 ## Question 14
 
@@ -302,7 +306,7 @@ class Log{
 
 [] Composition
 
-[] Association ponctuelle
+[X] Association ponctuelle
 
 [] Association permanente
 
@@ -336,7 +340,7 @@ class Connector{
 
 [] Composition
 
-[] Association ponctuelle
+[X] Association ponctuelle
 
 [] Association permanente
 
@@ -374,7 +378,7 @@ class Sd{
 
 [] Association ponctuelle
 
-[] Association permanente
+[X] Association permanente
 
 
 ## Question 17
@@ -399,7 +403,7 @@ class Arm{
 
 [] Agrégation
 
-[] Composition
+[X] Composition
 
 [] Association ponctuelle
 
@@ -422,7 +426,7 @@ class A{
 
 [] Oui.
 
-[] Non.
+[X] Non.
 
 ## Question 19
 
@@ -441,7 +445,7 @@ abstract class Model{
 
 [] Oui.
 
-[] Non.
+[X] Non.
 
 ## Question 20
 
@@ -468,7 +472,7 @@ $post = new Post;
 
 [] Anonymous
 
-[] POST
+[X] POST
 
 [] Une exception PHP de type InvalidArgument
 
