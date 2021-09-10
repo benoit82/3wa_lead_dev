@@ -26,8 +26,7 @@ Héritage : couplage fort, seulement si "cette classe EST (ou UNE SORTE DE) tel 
 ### Exercices annexes
 #### [Exercice de synthèse](./02-SOLID/exercice-synthese)
 #### [Questionnaire](./02-SOLID/questionnaire.md)
-#### Exercice Form, création de formulaire à la volée
-
+#### [Exercice Form, création de formulaire à la volée](./02-SOLID/form)
 ```bash
 php -S localhost:8000 app.php
 ```
