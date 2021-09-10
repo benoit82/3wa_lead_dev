@@ -30,3 +30,4 @@ Héritage : couplage fort, seulement si "cette classe EST (ou UNE SORTE DE) tel 
 ```bash
 php -S localhost:8000 app.php
 ```
+### [Epreuve/Examen fin de semaine](./examen)
