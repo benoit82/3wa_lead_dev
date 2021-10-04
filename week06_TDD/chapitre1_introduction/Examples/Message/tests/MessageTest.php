@@ -22,6 +22,6 @@ class MessageTest extends TestCase
     public function testSetLangFrDotEnv()
     {
         $this->message->setLang($_ENV['LANGUAGE']);
-        $this->assertSame("Bonjour les gens!", $this->message->get());
+        $this->assertSame("Bonjour tout le monde!", $this->message->get());
     }
 }
