@@ -2,8 +2,11 @@
 <phpunit bootstrap="tests/autoload.php"
          colors="true">
     <testsuites>
-        <testsuite name="01_model">
-            <directory>./tests</directory>
+       <testsuite name="Calculator">
+            <file>./tests/CalculatorTest.php</file>
+        </testsuite>
+         <testsuite name="Model">
+           <directory>./tests/Model/ModelTest.php</directory>
         </testsuite>
     </testsuites>
 </phpunit>
