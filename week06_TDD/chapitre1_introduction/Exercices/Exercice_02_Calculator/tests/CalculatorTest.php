@@ -2,26 +2,36 @@
 // Framework de tests PHPUNIT
 use PHPUnit\Framework\TestCase;
 
-use App\Message;
+use App\Calculator;
 
-class MessageTest extends TestCase
+class CalculatorTest extends TestCase
 {
 
-    protected Message $message;
+    protected Calculator $calculator;
 
     public function setUp(): void
     {
-        $this->message = new Message('en');
+        $this->calculator = new Calculator(2);
     }
 
-    public function testDefaultLangEn()
-    {
-        $this->assertSame("Hello World!", $this->message->get());
+    public function addProvider(): array {
+        return [
+            [1,2,3],
+            [3.31,4.2,7.51]
+        ];
     }
 
-    public function testSetLangFrDotEnv()
+    /**
+     * @dataProvider addProvider
+     */
+    public function testAddition($a, $b, $expected)
     {
-        $this->message->setLang($_ENV['LANGUAGE']);
-        $this->assertSame("Bonjour tout le monde!", $this->message->get());
+        $this->assertEquals($expected, $this->calculator->add($a, $b));
+    }
+
+    public function testDivisionByZero()
+    {
+        $this->expectExceptionMessage('Impossible de diviser par zéro');
+        $this->calculator->division(2,0);
     }
 }
