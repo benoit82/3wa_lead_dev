@@ -3,7 +3,8 @@
 use App\Model\{Add, Divisor, Number};
 use PHPUnit\Framework\TestCase;
 
-class ModelTest extends TestCase {
+class ModelTest extends TestCase
+{
 
     protected $a;
     protected $b;
@@ -33,5 +34,4 @@ class ModelTest extends TestCase {
         $this->expectExceptionMessage("Impossible de diviser par zéro.");
         $this->assertEquals("2.0", $div->division($this->a, new Number(0)));
     }
-
 }
