@@ -34,4 +34,10 @@ class CalculatorTest extends TestCase
         $this->expectExceptionMessage('Impossible de diviser par zéro');
         $this->calculator->division(2,0);
     }
+
+    public function testDivision()
+    {
+        $res = $this->calculator->division(50,5);
+        $this->assertEquals($res, 10.0);
+    }
 }
