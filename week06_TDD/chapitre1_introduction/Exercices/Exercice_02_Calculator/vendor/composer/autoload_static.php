@@ -31,7 +31,6 @@ class ComposerStaticInitf2d53f9b9fbe763aae51320eacb0bc1c
         ),
         'P' => 
         array (
-            'Providers\\' => 10,
             'Prophecy\\' => 9,
             'PhpParser\\' => 10,
             'PhpOption\\' => 10,
@@ -75,10 +74,6 @@ class ComposerStaticInitf2d53f9b9fbe763aae51320eacb0bc1c
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
-        'Providers\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/tests/Providers',
-        ),
         'Prophecy\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy',
@@ -111,6 +106,10 @@ class ComposerStaticInitf2d53f9b9fbe763aae51320eacb0bc1c
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
+    );
+
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/../..' . '/tests',
     );
 
     public static $classMap = array (
@@ -756,6 +755,7 @@ class ComposerStaticInitf2d53f9b9fbe763aae51320eacb0bc1c
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitf2d53f9b9fbe763aae51320eacb0bc1c::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitf2d53f9b9fbe763aae51320eacb0bc1c::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInitf2d53f9b9fbe763aae51320eacb0bc1c::$fallbackDirsPsr4;
             $loader->classMap = ComposerStaticInitf2d53f9b9fbe763aae51320eacb0bc1c::$classMap;
 
         }, null, ClassLoader::class);
