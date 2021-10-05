@@ -7,10 +7,11 @@ use App\Even;
 class EvenTest extends TestCase
 {
     protected Even $even;
+    protected int $max = 100;
 
     public function setUp(): void
     {
-        $this->even = new Even(100);
+        $this->even = new Even($this->max);
         $this->even->rewind();
     }
 
@@ -23,7 +24,7 @@ class EvenTest extends TestCase
 
     public function testNumberOfValues(): void
     {
-        $this->assertSame(iterator_count($this->even), 100 / 2);
+        $this->assertSame(iterator_count($this->even), (int) ceil($this->max / 2));
     }
 
     public function testNumbers(): void
@@ -42,6 +43,7 @@ class EvenTest extends TestCase
 
     public function testLastNumber(): void
     {
-        $this->assertSame($this->even->getLastNumber(), 98);
+        $shouldBeTheLastEvenNumber = $this->max % 2 === 0 ? $this->max - 2 : $this->max - 1;
+        $this->assertSame($this->even->getLastNumber(), $shouldBeTheLastEvenNumber);
     }
 }
