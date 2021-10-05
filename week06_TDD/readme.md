@@ -4,4 +4,6 @@
 ### Chapitre 1 : introduction
 * [Exemple/Exercice 01 : Message](chapitre1_introduction/Examples/Message)
 * [Exercice 02 : Calculator](chapitre1_introduction/Exercices/Exercice_02_Calculator)
+* [Exercice 03 : Model](chapitre1_introduction/Exercices/Exercice_03_Model)
+* [Exercice 04 : Iterator](chapitre1_introduction/Exercices/Exercice_04_Iterator)
 

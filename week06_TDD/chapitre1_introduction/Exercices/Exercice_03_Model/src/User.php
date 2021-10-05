@@ -5,9 +5,10 @@ namespace App;
 class User {
 
     private string $username;
+    private string $createdAt;
     private int $id;
 
-    public function __set($name, string $value):void
+    public function __set($name, $value):void
     {
         $this->$name = $value;
     }

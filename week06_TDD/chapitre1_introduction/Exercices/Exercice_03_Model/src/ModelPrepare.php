@@ -42,10 +42,10 @@ class ModelPrepare {
      */
     public function update(User $user)
     {
-        $query = 'UPDATE user SET username=:username WHERE id=:id';
+        $query = 'UPDATE user SET username=:username, createdAt=:createdAt WHERE id=:id';
 
         $stmt = $this->pdo->prepare($query);
-        $stmt->execute([':id' => $user->id, ':username' => $user->username]);
+        $stmt->execute([':id' => $user->id, ':username' => $user->username, ':createdAt' => $user->createdAt]);
 
         return $stmt->setFetchMode(\PDO::FETCH_CLASS, 'App\\User');
     }
@@ -70,10 +70,10 @@ class ModelPrepare {
      */
     public function hydrate(array $users): void
     {
-        $query = 'INSERT INTO user (username) VALUES (:username)';
+        $query = 'INSERT INTO user (username, createdAt) VALUES (:username, :createdAt)';
         $stmt = $this->pdo->prepare($query);
         foreach ($users as $u) {
-            $stmt->execute([':username' => $u['username']]);
+            $stmt->execute([':username' => $u['username'], ':createdAt' => $u['createdAt']]);
         }
         $stmt = null;
 
@@ -81,9 +81,9 @@ class ModelPrepare {
 
     public function save(User $user): void
     {
-        $query = 'INSERT INTO user (username) VALUES (:username)';
+        $query = 'INSERT INTO user (username, createdAt) VALUES (:username, :createdAt)';
         $stmt = $this->pdo->prepare($query);
-        $stmt->execute([':username' => $user->username]);
+        $stmt->execute([':username' => $user->username, ':createdAt', $user->createdAt]);
         $stmt = null;
     }
 }

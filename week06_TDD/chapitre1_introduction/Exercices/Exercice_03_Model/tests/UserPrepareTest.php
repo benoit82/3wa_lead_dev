@@ -3,6 +3,7 @@
 use PHPUnit\Framework\TestCase;
 
 use App\{ModelPrepare, User};
+use Symfony\Component\Yaml\Parser;
 
 class UserPrepareTest extends TestCase
 {
@@ -19,17 +20,15 @@ class UserPrepareTest extends TestCase
       "CREATE TABLE IF NOT EXISTS user
           (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            username VARCHAR( 225 )
+            username VARCHAR( 225 ),
+            createdAt DATETIME
           )
             "
     );
 
     $this->model = new ModelPrepare($this->pdo);
-    $this->users = [
-      ['username' => 'Alan'],
-      ['username' => 'Sophie'],
-      ['username' => 'Bernard'],
-    ];
+    $yaml = new Parser();
+    $this->users = $yaml->parse(file_get_contents(__DIR__ . '/_data/seed.yml'))['users'];
   }
 
   /**
@@ -62,14 +61,14 @@ class UserPrepareTest extends TestCase
   {
     $this->model->hydrate($this->users);
     $userAlan = $this->model->find(1);
-    $this->assertEquals($userAlan->username, "Alan");
+    $this->assertEquals($userAlan->username, "joe");
 
     $userAlan->username = "Benoit";
     $this->model->update($userAlan);
     $userId1 = $this->model->find(1);
     
     $this->assertSame($userAlan->username, $userId1->username);
-    $this->assertNotEquals($userId1->username, "Alan");
+    $this->assertNotEquals($userId1->username, "joe");
     $this->assertSame($userId1->username, "Benoit");
   }
 
