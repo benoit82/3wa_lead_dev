@@ -2,8 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-use App\User;
-use App\Model;
+use App\{User, Model};
 
 class UserTest extends TestCase
 {
