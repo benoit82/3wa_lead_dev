@@ -69,9 +69,9 @@ class UserTest extends TestCase
     $this->model->update($userAlan);
     $userId1 = $this->model->find(1);
     
-    $this->assertEquals($userAlan->username, $userId1->username);
+    $this->assertSame($userAlan->username, $userId1->username);
     $this->assertNotEquals($userId1->username, "Alan");
-    $this->assertEquals($userId1->username, "Benoit");
+    $this->assertSame($userId1->username, "Benoit");
   }
 
   /**
