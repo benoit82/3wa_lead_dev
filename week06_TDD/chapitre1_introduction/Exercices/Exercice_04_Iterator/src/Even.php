@@ -2,7 +2,9 @@
 
 namespace App;
 
-class Even implements \Iterator {
+use \Iterator;
+
+class Even implements Iterator {
 
     private int $position = 0;
     private array $array = [];
