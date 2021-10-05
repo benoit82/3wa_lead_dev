@@ -2,10 +2,10 @@
 
 namespace App\Model;
 
-class Add
+class Add implements Calculable
 {
 
-    public function add(Number $a, Number $b): NumberString
+    public function exec(Number $a, Number $b): NumberString
     {
 
         return new NumberString($a->getNumber() + $b->getNumber());

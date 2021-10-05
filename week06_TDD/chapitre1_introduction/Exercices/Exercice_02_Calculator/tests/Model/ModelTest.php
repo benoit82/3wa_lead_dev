@@ -1,6 +1,6 @@
 <?php
 
-use App\Model\{Add, Divisor, Number};
+use App\Model\{Add, Divisor, Number, NumberString};
 use PHPUnit\Framework\TestCase;
 
 class ModelTest extends TestCase
@@ -18,13 +18,14 @@ class ModelTest extends TestCase
     public function testAdd()
     {
         $add = new Add;
-        $this->assertEquals("6.0", $add->add($this->a, $this->b));
+        $this->assertEquals("6.0", $add->exec($this->a, $this->b));
     }
 
     public function testDivisor()
     {
         $div = new Divisor;
-        $this->assertEquals("2.0", $div->division($this->a, $this->b));
+        $this->assertInstanceOf(NumberString::class, $div->exec($this->a, $this->b));
+        $this->assertEquals("2.0", $div->exec($this->a, $this->b));
     }
 
     public function testExceptionDivisor()
@@ -32,6 +33,6 @@ class ModelTest extends TestCase
         $div = new Divisor;
         $this->expectException(DivisionByZeroError::class);
         $this->expectExceptionMessage("Impossible de diviser par zéro.");
-        $this->assertEquals("2.0", $div->division($this->a, new Number(0)));
+        $this->assertEquals("2.0", $div->exec($this->a, new Number(0)));
     }
 }
