@@ -34,16 +34,18 @@ class EvenTest extends TestCase
 
     public function testNumbersAndIteratorBehavior(): void
     {
-        $this->assertSame($this->even->current(), 0);
+        $even = new Even(max: 5);
+        $even->rewind();
+        $this->assertSame($even->current(), 0);
 
-        $this->even->next();
-        $this->assertSame($this->even->current(), 2);
+        $even->next();
+        $this->assertSame($even->current(), 2);
 
-        $this->assertSame($this->even->key(), 1);
-        $this->assertTrue($this->even->valid());
+        $this->assertSame($even->key(), 1);
+        $this->assertTrue($even->valid());
         
-        $this->even->rewind();
-        $this->assertSame($this->even->key(), 0);
+        $even->rewind();
+        $this->assertSame($even->key(), 0);
     }
 
     public function testLastNumber(): void
