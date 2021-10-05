@@ -43,10 +43,9 @@ class Even implements Iterator {
     {
         $this->rewind();
         while ($this->valid()) {
-            $pos = $this->position;
             $this->next();
         }
-        return $pos * 2;
+        return ($this->position -1) * 2;
     }
 
 }
