@@ -24,10 +24,10 @@ class EvenTest extends TestCase
 
     public function testNumberOfValues(): void
     {
-        $this->assertSame(iterator_count($this->even), (int) ceil($this->max / 2));
+        $this->assertEquals(iterator_count($this->even), (int) ceil($this->max / 2));
     }
 
-    public function testNumbers(): void
+    public function testNumbersAndIteratorBehavior(): void
     {
         $this->assertSame($this->even->current(), 0);
 
