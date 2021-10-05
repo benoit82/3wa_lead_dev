@@ -16,7 +16,7 @@ class ModelPrepare {
      */
     public function delete(int $id): void
     {
-        $query = 'DELETE FROM user WHERE id=:id ';
+        $query = 'DELETE FROM user WHERE id=:id';
 
         $stmt = $this->pdo->prepare($query);
         $stmt->execute([':id' => $id]);
