@@ -40,10 +40,4 @@ class EvenTest extends TestCase
         $this->even->rewind();
         $this->assertSame($this->even->key(), 0);
     }
-
-    public function testLastNumber(): void
-    {
-        $shouldBeTheLastEvenNumber = $this->max % 2 === 0 ? $this->max - 2 : $this->max - 1;
-        $this->assertSame($this->even->getLastNumber(), $shouldBeTheLastEvenNumber);
-    }
 }

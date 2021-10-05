@@ -7,13 +7,11 @@ use \Iterator;
 class Even implements Iterator {
 
     private int $position = 0;
-    private array $array = [];
+    private int $max;
 
     public function __construct(int $max)
     {
-        for ($i=0; $i < $max; $i++) { 
-            if($i%2 === 0) $this->array[] = $i;
-        }
+        $this->max = $max;
     }
 
     public function rewind()
@@ -23,7 +21,7 @@ class Even implements Iterator {
 
     public function current()
     {
-        return $this->array[$this->position];
+        return $this->position * 2;
     }
 
     public function key()
@@ -38,12 +36,7 @@ class Even implements Iterator {
 
     public function valid()
     {
-        return isset($this->array[$this->position]);
-    }
-
-    public function getLastNumber()
-    {
-        return $this->array[count($this->array) -1];
+        return $this->position * 2 < $this->max;
     }
 
 }
