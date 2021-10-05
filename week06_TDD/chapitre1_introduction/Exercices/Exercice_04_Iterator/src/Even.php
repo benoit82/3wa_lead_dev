@@ -36,7 +36,7 @@ class Even implements Iterator {
 
     public function valid()
     {
-        return $this->position * 2 < $this->max;
+        return $this->current() < $this->max;
     }
 
     public function getLastNumber()

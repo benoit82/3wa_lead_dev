@@ -22,6 +22,11 @@ class EvenTest extends TestCase
         }
     }
 
+    public function testIsIterable()
+    {
+        $this->assertTrue(is_iterable($this->even));
+    }
+
     public function testNumberOfValues(): void
     {
         $this->assertEquals(iterator_count($this->even), (int) ceil($this->max / 2));
