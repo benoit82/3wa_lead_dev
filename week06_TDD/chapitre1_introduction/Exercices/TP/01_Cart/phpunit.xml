@@ -2,7 +2,7 @@
 <phpunit bootstrap="tests/autoload.php"
          colors="true">
     <testsuites>
-        <testsuite name="Fibonacci">
+        <testsuite name="01_model">
             <directory>./tests</directory>
         </testsuite>
     </testsuites>
