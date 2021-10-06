@@ -38,14 +38,4 @@ class Even implements Iterator {
     {
         return $this->current() < $this->max;
     }
-
-    public function getLastNumber()
-    {
-        $this->rewind();
-        while ($this->valid()) {
-            $this->next();
-        }
-        return ($this->position -1) * 2;
-    }
-
 }
