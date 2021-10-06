@@ -1,5 +1,4 @@
 # [Pratique Lead Dev. 3WA](https://github.com/Antoine07/leaddev01)
-
 - [Semaine 01 : PHP avancé](/week01_PHP/readme.md)
     - outil utilisé : PHP >= 8.0.3
 - [Semaine 02 : UML](/week02_UML/readme.md)
