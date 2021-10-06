@@ -6,4 +6,5 @@
 * [Exercice 02 : Calculator](chapitre1_introduction/Exercices/Exercice_02_Calculator)
 * [Exercice 03 : Model](chapitre1_introduction/Exercices/Exercice_03_Model)
 * [Exercice 04 : Iterator](chapitre1_introduction/Exercices/Exercice_04_Iterator)
+* [Exercice 05 : Fibonacci](chapitre1_introduction/Exercices/Exercice_05_Fibonacci)
 
