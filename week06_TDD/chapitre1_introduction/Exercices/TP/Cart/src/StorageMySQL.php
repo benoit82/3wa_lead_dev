@@ -3,7 +3,6 @@
 namespace Cart;
 
 use Cart\Storable;
-use Cart\Product;
 use PDO;
 
 class StorageMySQL implements Storable
