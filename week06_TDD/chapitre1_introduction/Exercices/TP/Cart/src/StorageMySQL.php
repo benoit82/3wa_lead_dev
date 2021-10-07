@@ -72,7 +72,11 @@ class StorageMySQL implements Storable
 
     public function getStorage(): array
     {
+        $req = self::$pdo->query("SELECT * FROM product");
+        $req->setFetchMode(PDO::FETCH_OBJ);
+        $products = $req->fetchAll();
+        $req->closeCursor();
 
-        return $this->storage;
+        return $products;
     }
 }

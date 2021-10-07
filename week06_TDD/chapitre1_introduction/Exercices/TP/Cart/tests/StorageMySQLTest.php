@@ -103,23 +103,21 @@ class StorageMySQLTest extends TestCase
         $this->assertFalse($finalApple);
     }
 
+    private function getProducts() {
+        $req = self::$pdo->query("SELECT * FROM product");
+        $req->setFetchMode(PDO::FETCH_OBJ);
+        $products = $req->fetchAll();
+        $req->closeCursor();
+        return $products;
+    }
     /**
      * @test TestReset test if the storage is reset
      */
     public function testReset()
     {
-        $req = self::$pdo->query("SELECT * FROM product");
-        $req->setFetchMode(PDO::FETCH_OBJ);
-        $products = $req->fetchAll();
-        $req->closeCursor();
-        $this->assertCount(3, $products);
-
+        $this->assertCount(3, $this->getProducts());
         $this->storage->reset();
-        $req = self::$pdo->query("SELECT * FROM product");
-        $req->setFetchMode(PDO::FETCH_OBJ);
-        $products = $req->fetchAll();
-        $req->closeCursor();
-        $this->assertCount(0, $products);
+        $this->assertCount(0, $this->getProducts());
     }
 
     /**
@@ -129,6 +127,15 @@ class StorageMySQLTest extends TestCase
     {
         $this->assertEquals($this->storage->total(), 25.2);
     }
+
+    /**
+     * @test testGetStorage test if the storage is return
+     */
+    public function testGetStorage()
+    {
+        $this->assertCount(3, $this->getProducts());
+    }
+
 
     public function tearDown(): void
     {
