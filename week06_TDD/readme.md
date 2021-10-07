@@ -9,4 +9,4 @@
 * [Exercice 05 : Fibonacci](chapitre1_introduction/Exercices/Exercice_05_Fibonacci)
 
 ### TP
-* [01 : Cart](TP/Cart) - Equipe : Emmanuel - Camile - Benoît
+* [01 : Cart](chapitre1_introduction/Exercices/TP/Cart) - Equipe : Emmanuel - Camile - Benoît
