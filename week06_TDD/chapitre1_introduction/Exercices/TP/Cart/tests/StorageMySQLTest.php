@@ -133,7 +133,14 @@ class StorageMySQLTest extends TestCase
      */
     public function testGetStorage()
     {
-        $this->assertCount(3, $this->getProducts());
+        extract($this->products);
+        $products = $this->getProducts();
+
+        $this->assertEquals($products[0]->name, $apple->getName());
+        $this->assertEquals($products[1]->name, $raspberry->getName());
+        $this->assertEquals($products[2]->name, $strawberry->getName());
+            
+        $this->assertCount(3, $products);
     }
 
 
