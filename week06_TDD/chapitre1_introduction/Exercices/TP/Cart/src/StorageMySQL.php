@@ -58,8 +58,12 @@ class StorageMySQL implements Storable{
 
     // TODO refactoring responsability ?
     public function total():float{
+        $req = $this->pdo->query('SELECT Sum(total) As total FROM product');
+        $req->setFetchMode(PDO::FETCH_OBJ);
+        $product = $req->fetch();
+        $req->closeCursor();
 
-        return array_sum($this->storage);
+        return $product->total;
     }
 
     public function getStorage():array{

@@ -6,7 +6,7 @@ use \PDO;
 
 class StorageMySQLTest extends TestCase
 {
-    private static PDO $pdo;
+    private static $pdo;
     private array $products;
 
     public function setup(): void
@@ -26,23 +26,6 @@ class StorageMySQLTest extends TestCase
         self::$pdo = new PDO("mysql:host=localhost:3306; dbname=fruittest", 'root', '');
     }
 
-    public function tearDown(): void
-    {
-        self::$pdo->exec("
-        DROP DATABASE IF EXISTS fruittest ;
-        CREATE DATABASE fruittest DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-        use fruittest;
-        CREATE TABLE IF NOT EXISTS 
-        product (
-            ID INT NOT NULL AUTO_INCREMENT, 
-            name VARCHAR(100), 
-            price DECIMAL(7,2), 
-            total DECIMAL(7,2) NOT NULL DEFAULT 0.00, 
-            PRIMARY KEY(id) )ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
-        INSERT INTO product (name, price) VALUES  ('apple', 10.5), ('raspberry',13), ('strawberry', 7.8);
-        ");
-    }
 
     private function getProductFromDB(string $name)
     {
@@ -118,5 +101,28 @@ class StorageMySQLTest extends TestCase
         $this->storage->restore($apple->getName());
         $finalApple = $this->getProductFromDB($apple->getName());
         $this->assertFalse($finalApple);
+    }
+
+    public function tearDown(): void
+    {
+        self::$pdo->exec("
+        DROP DATABASE IF EXISTS fruittest ;
+        CREATE DATABASE fruittest DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+        use fruittest;
+        CREATE TABLE IF NOT EXISTS 
+        product (
+            ID INT NOT NULL AUTO_INCREMENT, 
+            name VARCHAR(100), 
+            price DECIMAL(7,2), 
+            total DECIMAL(7,2) NOT NULL DEFAULT 0.00, 
+            PRIMARY KEY(id) )ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+        INSERT INTO product (name, price) VALUES  ('apple', 10.5), ('raspberry',13), ('strawberry', 7.8);
+        ");
+    }
+
+    public static function tearDownAfterClass(): void
+    {
+        self::$pdo = null;
     }
 }
