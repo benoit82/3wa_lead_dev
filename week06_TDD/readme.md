@@ -13,4 +13,4 @@
 
 ### Rappel TECH
 * [Generator](chapitre1_introduction/TECH/generator.php)
-* [SQLite (script)](chapitre1_introduction/TECH/sqlite.php)
+* [SQLite (script)](chapitre1_introduction/TECH/sqlite.php) // créer une DB memory (temporaire) pour les tests avec SQLite
