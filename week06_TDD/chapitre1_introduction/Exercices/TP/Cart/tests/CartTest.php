@@ -39,6 +39,10 @@ class CartTest extends TestCase
 
         $this->assertSame($key, 'apple');
         $this->assertSame($value, 3*10.5*1.2);
+        /*
+        !! on doit tester uniquement sur la classe cible du test,
+        !! il faut eviter de verifier sur les dépenses les résultats
+        */
     }
 
     /**
