@@ -23,7 +23,6 @@ class StorageMySQLTest extends TestCase
             'strawberry' => new Product('strawberry', 7.5),
             'orange' => new Product('orange', 7.5),
         ];
-        extract($this->products);
         $this->storage = new StorageMySQL(self::$pdo);
     }
 
@@ -53,10 +52,12 @@ class StorageMySQLTest extends TestCase
 
     private function getProductFromDB(string $name)
     {
-        $req = self::$pdo->query("SELECT * FROM product WHERE name='" . $name . "'");
+        $req = self::$pdo->prepare("SELECT * FROM product WHERE name=:name");
+        $req->execute([':name' => $name]);
         $req->setFetchMode(PDO::FETCH_OBJ);
         $product = $req->fetch();
         $req->closeCursor();
+
         return $product;
     }
 
@@ -98,6 +99,10 @@ class StorageMySQLTest extends TestCase
         $initialOrange = $this->getProductFromDB($orange->getName());
         $this->assertFalse($initialOrange);
 
+        /*
+        !! ON SORT DU PRINCIPE DE SINGLE RESPONSABILITY ICI
+        LA CLASSE DEVRA GERER L'EXCEPTION ET NON LE STORAGE
+        */
         $this->expectException(Exception::class);
         $this->expectExceptionMessage("Le prix unitaire ne peux pas être égal ou inférieur à 0");
         $this->storage->setValue($orange->getName(), $orange->getPrice() * 2 * 1.2, 0);
@@ -109,10 +114,15 @@ class StorageMySQLTest extends TestCase
     public function testRestoreException()
     {
         extract($this->products);
+        /*
+        !! ON SORT DU PRINCIPE DE SINGLE RESPONSABILITY ICI
+        LA CLASSE DEVRA GERER L'EXCEPTION ET NON LE STORAGE
+        */
         $this->expectException(Exception::class);
         $this->expectExceptionMessage("Vous ne pouvez pas retirer un produit inexistant.");
         $this->storage->restore($orange->getName());
     }
+
     /**
      * @test testRestore test if we remove a product from DB by Restore Methd
      */
@@ -133,6 +143,7 @@ class StorageMySQLTest extends TestCase
         $req->setFetchMode(PDO::FETCH_OBJ);
         $products = $req->fetchAll();
         $req->closeCursor();
+
         return $products;
     }
     /**
@@ -154,12 +165,12 @@ class StorageMySQLTest extends TestCase
     }
 
     /**
-     * @test testGetStorage test if the storage is return
+     * @test testGetStorage test if the storage returns an array
      */
     public function testGetStorage()
     {
         extract($this->products);
-        $products = $this->getProducts();
+        $products = $this->storage->getStorage();
 
         $this->assertEquals($products[0]->name, $apple->getName());
         $this->assertEquals($products[1]->name, $raspberry->getName());

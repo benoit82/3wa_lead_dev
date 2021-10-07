@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use Cart\{Product,StorageArray, StorageSession, Cart, StorageMySQL };
+use Cart\{Product, StorageSession, Cart, StorageMySQL };
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
