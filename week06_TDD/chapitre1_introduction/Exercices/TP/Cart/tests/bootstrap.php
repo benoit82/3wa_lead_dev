@@ -19,5 +19,5 @@ product (
     total DECIMAL(7,2) NOT NULL DEFAULT 0.00, 
     PRIMARY KEY(id) )ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
-INSERT INTO product (name, price) VALUES  ('apple', 10.5), ('raspberry',13), ('strawberry', 7.8);
+INSERT INTO product (name, price, total) VALUES  ('apple', 10.5, 25.2), ('raspberry',13, 0), ('strawberry', 7.8, 0);
 ");
