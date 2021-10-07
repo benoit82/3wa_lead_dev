@@ -10,3 +10,7 @@
 
 ### TP
 * [01 : Cart](chapitre1_introduction/Exercices/TP/Cart) - Equipe : Emmanuel - Camile - Benoît
+
+### Rappel TECH
+* [Generator](chapitre1_introduction/TECH/generator.php)
+* [SQLite (script)](chapitre1_introduction/TECH/sqlite.php)
