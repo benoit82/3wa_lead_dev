@@ -103,6 +103,33 @@ class StorageMySQLTest extends TestCase
         $this->assertFalse($finalApple);
     }
 
+    /**
+     * @test TestReset test if the storage is reset
+     */
+    public function testReset()
+    {
+        $req = self::$pdo->query("SELECT * FROM product");
+        $req->setFetchMode(PDO::FETCH_OBJ);
+        $products = $req->fetchAll();
+        $req->closeCursor();
+        $this->assertCount(3, $products);
+
+        $this->storage->reset();
+        $req = self::$pdo->query("SELECT * FROM product");
+        $req->setFetchMode(PDO::FETCH_OBJ);
+        $products = $req->fetchAll();
+        $req->closeCursor();
+        $this->assertCount(0, $products);
+    }
+
+    /**
+     * @test testGetTotalStorage test if we retrieve the total amount of the storage
+     */
+    public function testGetTotalStorage()
+    {
+        $this->assertEquals($this->storage->total(), 25.2);
+    }
+
     public function tearDown(): void
     {
         self::$pdo->exec("
@@ -117,7 +144,7 @@ class StorageMySQLTest extends TestCase
             total DECIMAL(7,2) NOT NULL DEFAULT 0.00, 
             PRIMARY KEY(id) )ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
-        INSERT INTO product (name, price) VALUES  ('apple', 10.5), ('raspberry',13), ('strawberry', 7.8);
+INSERT INTO product (name, price, total) VALUES  ('apple', 10.5, 25.2), ('raspberry',13, 0), ('strawberry', 7.8, 0);
         ");
     }
 
