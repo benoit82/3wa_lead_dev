@@ -9,6 +9,12 @@ class StorageMySQLTest extends TestCase
     private static $pdo;
     private array $products;
 
+
+    public static function setUpBeforeClass(): void
+    {
+        self::$pdo = new PDO("mysql:host=localhost:3306; dbname=fruittest", 'root', '');
+    }
+
     public function setup(): void
     {
         $this->products = [
@@ -19,11 +25,6 @@ class StorageMySQLTest extends TestCase
         ];
         extract($this->products);
         $this->storage = new StorageMySQL(self::$pdo);
-    }
-
-    public static function setUpBeforeClass(): void
-    {
-        self::$pdo = new PDO("mysql:host=localhost:3306; dbname=fruittest", 'root', '');
     }
 
     public function tearDown(): void
