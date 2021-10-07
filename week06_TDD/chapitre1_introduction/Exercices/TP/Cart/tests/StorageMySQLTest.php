@@ -26,6 +26,29 @@ class StorageMySQLTest extends TestCase
         self::$pdo = new PDO("mysql:host=localhost:3306; dbname=fruittest", 'root', '');
     }
 
+    public function tearDown(): void
+    {
+        self::$pdo->exec("
+        DROP DATABASE IF EXISTS fruittest ;
+        CREATE DATABASE fruittest DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+        use fruittest;
+        CREATE TABLE IF NOT EXISTS 
+        product (
+            ID INT NOT NULL AUTO_INCREMENT, 
+            name VARCHAR(100), 
+            price DECIMAL(7,2), 
+            total DECIMAL(7,2) NOT NULL DEFAULT 0.00, 
+            PRIMARY KEY(id) )ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+            INSERT INTO product (name, price, total) VALUES  ('apple', 10.5, 25.2), ('raspberry',13, 0), ('strawberry', 7.8, 0);
+        ");
+    }
+
+    public static function tearDownAfterClass(): void
+    {
+        self::$pdo = null;
+    }
+
 
     private function getProductFromDB(string $name)
     {
@@ -103,7 +126,8 @@ class StorageMySQLTest extends TestCase
         $this->assertFalse($finalApple);
     }
 
-    private function getProducts() {
+    private function getProducts()
+    {
         $req = self::$pdo->query("SELECT * FROM product");
         $req->setFetchMode(PDO::FETCH_OBJ);
         $products = $req->fetchAll();
@@ -139,31 +163,7 @@ class StorageMySQLTest extends TestCase
         $this->assertEquals($products[0]->name, $apple->getName());
         $this->assertEquals($products[1]->name, $raspberry->getName());
         $this->assertEquals($products[2]->name, $strawberry->getName());
-            
+
         $this->assertCount(3, $products);
-    }
-
-
-    public function tearDown(): void
-    {
-        self::$pdo->exec("
-        DROP DATABASE IF EXISTS fruittest ;
-        CREATE DATABASE fruittest DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-        use fruittest;
-        CREATE TABLE IF NOT EXISTS 
-        product (
-            ID INT NOT NULL AUTO_INCREMENT, 
-            name VARCHAR(100), 
-            price DECIMAL(7,2), 
-            total DECIMAL(7,2) NOT NULL DEFAULT 0.00, 
-            PRIMARY KEY(id) )ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
-INSERT INTO product (name, price, total) VALUES  ('apple', 10.5, 25.2), ('raspberry',13, 0), ('strawberry', 7.8, 0);
-        ");
-    }
-
-    public static function tearDownAfterClass(): void
-    {
-        self::$pdo = null;
     }
 }
