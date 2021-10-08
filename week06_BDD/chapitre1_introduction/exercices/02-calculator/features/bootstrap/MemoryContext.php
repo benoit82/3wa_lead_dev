@@ -41,7 +41,6 @@ class MemoryContext implements Context
      */
     public static function prepare(BeforeSuiteScope $scope)
     {
-
         if (!isset(self::$calculator)) self::$calculator = new Calculator();
         foreach (self::gen() as [$num1, $num2]) self::$calculator->add($num1, $num2);
     }
