@@ -17,7 +17,7 @@ class FeatureContext implements Context
      * You can also pass arbitrary arguments to the
      * context constructor through behat.yml.
      */
-    private Message $message;
+    protected Message $message;
 
     public function __construct()
     {
@@ -29,7 +29,7 @@ class FeatureContext implements Context
      */
     public function jaiUnNouveauMessage($message)
     {
-        if ($message === "") throw new PendingException();
+        if (empty($message)) throw new PendingException();
         $this->message->addMessage($message);
     }
 
