@@ -9,4 +9,4 @@ Scenario: Memory
 
 Scenario: Memory reset
     Given several calculations, I have sums memorized
-    Then I should reset alls sums and get an empty array
+    Then I should reset alls sums and get an empty memory

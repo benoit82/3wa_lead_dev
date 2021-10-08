@@ -78,9 +78,9 @@ class MemoryContext implements Context
     }
 
     /**
-     * @Then I should reset alls sums and get an empty array
+     * @Then I should reset alls sums and get an empty memory
      */
-    public function iShouldResetAllsSumsAndGetAnEmptyArray()
+    public function iShouldResetAllsSumsAndGetAnEmptyMemory()
     {
         Assert::assertNotEmpty(self::$calculator->getMemory());
         self::$calculator->reset();
