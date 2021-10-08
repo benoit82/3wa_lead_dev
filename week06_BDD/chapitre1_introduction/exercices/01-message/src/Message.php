@@ -14,7 +14,7 @@ class Message
     public function addMessage($message): void
     {
         if (gettype($message) !== "string") throw new InvalidArgumentException;
-        $this->message .= ($this->message !== "" ? " " : "") . $message;
+        $this->message .= ($this->message !== "" ? " " : $this->message) . $message;
     }
 
 
