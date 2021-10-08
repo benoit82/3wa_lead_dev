@@ -26,20 +26,28 @@ class MemoryContext implements Context
     {
     }
 
+    public static function gen() {
+        yield [1, 5, 6];
+        yield [20, 10, 30];
+        yield [4, -7, -3];
+        yield [145, 300, 445];
+        yield [430.2, -0.2, 430];
+        yield [100, 100, 200];
+    }
+
     /**
      * @BeforeSuite
-     *     Examples:
-     *  | number1 | number2 | sum   |
-     *  |  1      |  5      |  6    |
-     *  |  20     |  10     |  30   |
-     *  |  4      |  -7     |  -3   |
      */
     public static function prepare(BeforeSuiteScope $scope)
     {
+
         if (!isset(self::$calculator)) self::$calculator = new Calculator();
-        self::$calculator->add(1, 5);
-        self::$calculator->add(20, 10);
-        self::$calculator->add(4, -7);
+        $gen = self::gen();
+        while($gen->valid()) {
+            [$num1, $num2] = $gen->current();
+            self::$calculator->add($num1, $num2);
+            $gen->next();
+        }
     }
 
     /**
@@ -62,9 +70,12 @@ class MemoryContext implements Context
     public function iShouldGetAllSumsRecorded()
     {
         $allSums = self::$calculator->getMemory();
-        Assert::assertContainsEquals(6, $allSums);
-        Assert::assertContainsEquals(30, $allSums);
-        Assert::assertContainsEquals(-3, $allSums);
+        $gen = self::gen();
+        while ($gen->valid()) {
+            $sum = $gen->current()[2];
+            Assert::assertContainsEquals($sum, $allSums);
+            $gen->next();
+        }
     }
 
     /**
