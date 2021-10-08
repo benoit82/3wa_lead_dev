@@ -2,13 +2,13 @@
 
 namespace App;
 
-class Calculator {
+class Calculator
+{
 
     public function __construct(
         private array $memory = [],
         private int $precision = 2
-    )
-    {
+    ) {
     }
 
     public function add(float $num1, float $num2)
