@@ -12,11 +12,3 @@ Scenario Outline: Addition
         |  1      |  5      |  6    |
         |  20     |  10     |  30   |
         |  4      |  -7     |  -3   |
-
-Scenario: Memory
-    Given several calculations
-    Then I should get all sums recorded
-
-Scenario: Memory reset
-    Given several calculations, I have sums memorized
-    Then I should reset alls sums and get an empty array

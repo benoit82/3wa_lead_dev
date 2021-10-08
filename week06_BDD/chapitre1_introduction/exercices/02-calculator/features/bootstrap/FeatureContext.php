@@ -34,7 +34,7 @@ class FeatureContext implements Context
     {
         $this->calculator->add($number1, $number2);
         // Assert::assertEquals($number1, $number2);
-        Assert::assertEquals($number1 + $number2, $this->calculator->getMemory()[0][2]);
+        Assert::assertEquals($number1 + $number2, $this->calculator->getMemory()[0]);
     }
 
     /**
@@ -43,8 +43,6 @@ class FeatureContext implements Context
     public function iShouldHaveNumbers($sum)
     {
         $tab = $this->calculator->getMemory();
-        var_dump($tab);
-        die;
         Assert::assertEquals($tab[0], $sum);
     }
 }
