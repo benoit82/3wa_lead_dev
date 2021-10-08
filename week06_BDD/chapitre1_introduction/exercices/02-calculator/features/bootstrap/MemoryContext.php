@@ -46,9 +46,7 @@ class MemoryContext implements Context
      * @AfterScenario 
      */
     // public function cleanDB(AfterScenarioScope $scope)
-    // {
-    //     var_dump("ici after");
-    // }
+    // {}
 
     /**
      * @Given several calculations
