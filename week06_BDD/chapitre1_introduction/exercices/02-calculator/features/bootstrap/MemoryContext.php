@@ -29,7 +29,7 @@ class MemoryContext implements Context
     public static function gen()
     {
         yield [1, 5, 6];
-        yield [20, 10, 30];
+        yield [20.223, 10, 30.22];
         yield [4, -7, -3];
         yield [145, 300, 445];
         yield [430.2, -0.2, 430];
