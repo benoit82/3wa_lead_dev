@@ -10,7 +10,7 @@ Scénario: Avoir un message valide
 
 Scénario: Avoir un message non valide
     Etant donné que j'ai un nouveau message "17"
-    Alors je dois avoir une exception "InvalidArgumentException"
+    Alors je dois avoir une exception "TypeError"
 
 Scénario: Avoir un message valide
     Etant donné que j'ai un premier message "bonjour"

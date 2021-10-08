@@ -2,7 +2,7 @@
 
 namespace App;
 
-use InvalidArgumentException;
+use TypeError;
 
 class Message
 {
@@ -11,9 +11,9 @@ class Message
     {
     }
 
-    public function addMessage($message): void
+    public function addMessage(string $message): void
     {
-        if (gettype($message) !== "string") throw new InvalidArgumentException;
+        if (is_numeric($message)) throw new TypeError("Erreur de type pour le message attendu (numérique reçu)");
         $this->message .= ($this->message !== "" ? " " : $this->message) . $message;
     }
 

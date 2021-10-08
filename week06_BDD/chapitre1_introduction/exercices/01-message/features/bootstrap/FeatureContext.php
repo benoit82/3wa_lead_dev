@@ -29,7 +29,7 @@ class FeatureContext implements Context
      */
     public function jaiUnNouveauMessage($message)
     {
-        if (empty($message)) throw new PendingException();
+        if (empty($message)) throw new Exception();
         $this->message->addMessage($message);
     }
 
@@ -38,7 +38,7 @@ class FeatureContext implements Context
      */
     public function jeDoisAvoir($arg1)
     {
-        return $this->message->getMessageToUpperCase() === $arg1;
+        if($this->message->getMessageToUpperCase() !== strtoupper($arg1)) throw new Exception("ce n'est pas un message en majuscule.");
     }
 
     /**
@@ -46,7 +46,7 @@ class FeatureContext implements Context
      */
     public function jeDoisAvoirUneException($arg1)
     {
-        return $arg1 instanceof InvalidArgumentException;
+        if(!$arg1 instanceof TypeError) throw new Exception("L'erreur attendu ne s'est pas activé.");
     }
 
     /**
