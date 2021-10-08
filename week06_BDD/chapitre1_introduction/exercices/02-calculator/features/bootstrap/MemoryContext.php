@@ -66,7 +66,7 @@ class MemoryContext implements Context
     public function iShouldGetAllSumsRecorded()
     {
         $allSums = self::$calculator->getMemory();
-        foreach (self::gen() as [$n1, $n2, $sum]) Assert::assertContainsEquals($sum, $allSums);
+        foreach (self::gen() as $operator) Assert::assertContainsEquals(array_pop($operator), $allSums);
     }
 
     /**
