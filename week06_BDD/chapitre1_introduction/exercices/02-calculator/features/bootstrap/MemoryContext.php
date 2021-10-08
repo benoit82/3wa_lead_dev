@@ -26,7 +26,8 @@ class MemoryContext implements Context
     {
     }
 
-    public static function gen() {
+    public static function gen()
+    {
         yield [1, 5, 6];
         yield [20, 10, 30];
         yield [4, -7, -3];
@@ -42,12 +43,7 @@ class MemoryContext implements Context
     {
 
         if (!isset(self::$calculator)) self::$calculator = new Calculator();
-        $gen = self::gen();
-        while($gen->valid()) {
-            [$num1, $num2] = $gen->current();
-            self::$calculator->add($num1, $num2);
-            $gen->next();
-        }
+        foreach (self::gen() as [$num1, $num2]) self::$calculator->add($num1, $num2);
     }
 
     /**
@@ -70,12 +66,7 @@ class MemoryContext implements Context
     public function iShouldGetAllSumsRecorded()
     {
         $allSums = self::$calculator->getMemory();
-        $gen = self::gen();
-        while ($gen->valid()) {
-            $sum = $gen->current()[2];
-            Assert::assertContainsEquals($sum, $allSums);
-            $gen->next();
-        }
+        foreach (self::gen() as [$n1, $n2, $sum]) Assert::assertContainsEquals($sum, $allSums);
     }
 
     /**
