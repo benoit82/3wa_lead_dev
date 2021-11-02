@@ -3,6 +3,9 @@
 
 ### Chapitre 1 : Observer
 * [exemple 01 : Observer](chap1_Observer/exemples/observable.php)
+* [exercice 01 : Observer](chap1_Observer/exercices/01_cart/app)
+### Chapitre 2 : Iterator
+* [exercice 01 : Iterator](chap2_Iterator/exercices/01_Iterator/app/app.php)
 
 ### TP
 *
