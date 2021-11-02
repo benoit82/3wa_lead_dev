@@ -1,7 +1,8 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use App\{LogFile, Product, Cart};
+use App\Oberservers\LogFile;
+use App\{Product, Cart};
 
 class LogFileTest extends TestCase
 {

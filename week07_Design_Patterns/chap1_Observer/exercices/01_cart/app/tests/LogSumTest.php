@@ -1,7 +1,8 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use App\{LogSum, Product, Cart};
+use App\{Product, Cart};
+use App\Oberservers\LogSum;
 
 class LogSumTest extends TestCase
 {

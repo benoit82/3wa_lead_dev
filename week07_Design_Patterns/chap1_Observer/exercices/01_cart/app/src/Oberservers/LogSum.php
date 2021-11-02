@@ -1,7 +1,8 @@
 <?php
 
-namespace App;
+namespace App\Oberservers;
 
+use App\Cart;
 use SplObserver;
 use SplSubject;
 
