@@ -8,4 +8,7 @@
 - [Semaine 05 : SOLID](/week05_SOLID/readme.md)
 - [Semaine 06 : TDD](/week06_TDD/readme.md)
 - [Semaine 06 : BDD](/week06_BDD/readme.md)
+<<<<<<< HEAD
 - [Semaine 07 : Design Pattern](/week07_Pattern/readme.md)
+=======
+>>>>>>> fb42e5ac4ed219e1623eb95de4611aa7edd32ce0
