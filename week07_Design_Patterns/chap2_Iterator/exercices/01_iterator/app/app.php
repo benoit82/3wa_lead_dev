@@ -11,5 +11,7 @@ $population = new Population();
 
 foreach ($popFile as $person) {
     [$id, $name] = explode(',', $person);
-    $population->addPerson(new Person(trim($name), (int) $id));
+    $population->addPerson(new Person(name: trim($name),id: (int) $id));
 }
+
+var_dump($population);
