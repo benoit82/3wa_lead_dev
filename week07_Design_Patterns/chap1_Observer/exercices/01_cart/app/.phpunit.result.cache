@@ -1,1 +1,1 @@
-{"version":1,"defects":{"LogFileTest::testLogFile":4,"LogSumTest::testLogSumTotal":4},"times":{"LogFileTest::testLogFile":0.025,"LogSumTest::testLogSumTotal":0.003}}
+{"version":1,"defects":{"LogFileTest::testLogFile":4,"LogSumTest::testLogSumTotal":4},"times":{"LogFileTest::testLogFile":0.026,"LogSumTest::testLogSumTotal":0.001}}

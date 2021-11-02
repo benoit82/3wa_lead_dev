@@ -9,7 +9,7 @@ use SplSubject;
 
 class LogFile implements SplObserver
 {
-    private static $fileLog = __DIR__ . '/../..' . DIRECTORY_SEPARATOR . 'logs' . DIRECTORY_SEPARATOR . 'cartTotal.txt';
+    private static $fileLog = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'logs' . DIRECTORY_SEPARATOR . 'cartTotal.txt';
 
     public function update(SplSubject $subject)
     {
