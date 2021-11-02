@@ -15,7 +15,7 @@ class LogFile implements SplObserver
         if ($subject instanceof Cart) file_put_contents(FILE_LOG, $subject->total());
     }
 
-    public function getTotalFromFile()
+    public function getTotalFromFile(): float
     {
         return (float) file_get_contents(FILE_LOG);
     }

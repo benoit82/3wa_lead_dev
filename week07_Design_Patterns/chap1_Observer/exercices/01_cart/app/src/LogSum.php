@@ -11,7 +11,7 @@ class LogSum implements SplObserver {
         if ($subject instanceof Cart) $this->storageSums[] = $subject->total();
     }
 
-    public function getLastTotal()
+    public function getLastTotal(): float
     {
         return (float) end($this->storageSums);
     }
