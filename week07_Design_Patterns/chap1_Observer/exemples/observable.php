@@ -40,7 +40,7 @@ class Log implements SplObserver
 
     public function update(SplSubject $subject)
     {
-        echo "log :" . $subject->getId() . "\n";
+        echo "log :" . $subject->getId() . PHP_EOL;
     }
 }
 
