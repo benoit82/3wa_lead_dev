@@ -2,7 +2,7 @@
 ## Intervenant : [Antoine Lucsko](https://github.com/Antoine07/)
 
 ### Chapitre 1 : Observer
-* [](chap1_Observer/)
+* [exemple 01 : Observer](chap1_Observer/exemples/observable.php)
 
 ### TP
 *
