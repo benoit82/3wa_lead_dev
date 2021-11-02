@@ -7,7 +7,6 @@ class LogFileTest extends TestCase
 {
     private $logFile;
     private $cart;
-    private $products;
 
     public function setup(): void
     {

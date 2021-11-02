@@ -7,7 +7,6 @@ class LogSumTest extends TestCase
 {
     private $logSum;
     private $cart;
-    private $products;
 
     public function setup(): void
     {
