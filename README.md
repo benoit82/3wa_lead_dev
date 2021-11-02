@@ -7,3 +7,5 @@
 - [Semaine 04 : Méthodes AGILE](/week04_AGILE/week04.md)
 - [Semaine 05 : SOLID](/week05_SOLID/readme.md)
 - [Semaine 06 : TDD](/week06_TDD/readme.md)
+- [Semaine 06 : BDD](/week06_BDD/readme.md)
+- [Semaine 07 : Design Pattern](/week07_Pattern/readme.md)
