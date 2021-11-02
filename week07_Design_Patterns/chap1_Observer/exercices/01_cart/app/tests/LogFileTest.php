@@ -22,8 +22,8 @@ class LogFileTest extends TestCase
      */
     public function testLogFile()
     {
-        $apple = new Product("Apple", 5);
-        $this->cart->buy($apple,2);
+        $apple = new Product("Apple", 1.20);
+        $this->cart->buy($apple,2);         
         $this->assertSame($this->logFile->getTotalFromFile(),$this->cart->total());
     }
 }
