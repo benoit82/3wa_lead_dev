@@ -8,11 +8,11 @@ use SplSubject;
 class LogSum implements SplObserver {
     public function update(SplSubject $subject)
     {
-        if ($subject instanceof Cart) $this->sum = $subject->total();
+        if ($subject instanceof Cart) $this->storageSums[] = $subject->total();
     }
 
-    public function getTotal()
+    public function getLastTotal()
     {
-        return (float) $this->sum;
+        return (float) end($this->storageSums);
     }
 }

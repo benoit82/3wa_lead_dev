@@ -24,6 +24,6 @@ class LogSumTest extends TestCase
     {
         $apple = new Product("Apple", 5);
         $this->cart->buy($apple,2);
-        $this->assertSame($this->logSum->getTotal(),$this->cart->total());
+        $this->assertSame($this->logSum->getLastTotal(),$this->cart->total());
     }
 }
