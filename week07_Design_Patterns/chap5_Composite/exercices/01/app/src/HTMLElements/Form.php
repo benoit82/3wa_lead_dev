@@ -13,15 +13,11 @@ class Form extends HtmlContainerElement
         parent::__construct();
     }
 
-    public function __toString(): string
+    public function operation(): string
     {
         if ($this->storage->count() === 0) throw new Exception("Empty Form");
 
-        $elements = '';
-
-        foreach ($this->storage as $element) {
-            $elements .= (string) $element;
-        }
+        $elements = parent::operation();
 
         return "<form name=\"{$this->name}\" action=\"{$this->action}\">$elements</form>";
     }

@@ -17,4 +17,19 @@ abstract class HtmlContainerElement implements HtmlElementInterface {
     {
         $this->storage->attach($element);
     }
+
+    public function operation(): string
+    {
+        $output = '';
+        foreach ($this->storage as $element) {
+            $output .= (string) $element;
+        }
+
+        return $output;
+    }
+
+    public function __toString(): string
+    {
+        return $this->operation();
+    }
 }

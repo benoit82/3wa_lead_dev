@@ -29,7 +29,7 @@ class WrapperTest extends TestCase
     public function testWrapperDisplay()
     {
         $this->wrapper->add(new Input(name: 'name', placeholder: "Name", type: 'text'));
-        $this->assertEquals((string) $this->wrapper, '<div><input type="text" name="name" placeholder="Name" /></div>');
+        $this->assertEquals((string) $this->wrapper, '<div class="wrapper-content"><input type="text" name="name" placeholder="Name" /></div>');
     }
 
 }

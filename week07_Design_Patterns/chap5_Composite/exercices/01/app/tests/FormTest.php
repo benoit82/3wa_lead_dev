@@ -41,6 +41,6 @@ class FormTest extends TestCase
         $wrapper = new Wrapper();
         $wrapper->add(new Input('image', 'Image', 'file'));
         $this->form->add($wrapper);
-        $this->assertEquals((string) $this->form, '<form name="user" action="/"><input type="text" name="name" placeholder="Name" /><div><input type="file" name="image" placeholder="Image" /></div></form>');
+        $this->assertEquals((string) $this->form, '<form name="user" action="/"><input type="text" name="name" placeholder="Name" /><div class="wrapper-content"><input type="file" name="image" placeholder="Image" /></div></form>');
     }
 }

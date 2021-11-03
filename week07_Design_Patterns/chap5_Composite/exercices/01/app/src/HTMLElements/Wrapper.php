@@ -12,16 +12,12 @@ class Wrapper extends HtmlContainerElement
         parent::__construct();
     }
 
-    public function __toString(): string
+    public function operation(): string
     {
         if ($this->storage->count() === 0) throw new Exception("Empty Wrapper");
 
-        $elements = '';
+        $elements = parent::operation();
 
-        foreach ($this->storage as $element) {
-            $elements .= (string) $element;
-        }
-
-        return "<div>$elements</div>";
+        return "<div class=\"wrapper-content\">$elements</div>";
     }
 }
