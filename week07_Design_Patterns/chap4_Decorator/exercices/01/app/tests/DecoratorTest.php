@@ -1,6 +1,6 @@
 <?php
 
-use App\models\{Paragraph, Italic, Text};
+use App\HTMLDecorator\{Paragraph, Italic, Text};
 use PHPUnit\Framework\TestCase;
 
 class DecoratorTest extends TestCase
