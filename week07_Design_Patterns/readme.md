@@ -10,8 +10,14 @@
 * voir support
 ### Chapitre 4 : Decorator / décorateur
 * [exercice 01](chap4_Decorator/exercices/01/app)
-### Chapitre 5 : composite
+### Chapitre 5 : Composite
 * [exercice 01](chap5_Composite/exercices/01/app)
+### Chapitre 6 : Facade
+* voir support
+### Chapitre 7 : Strategy
+* voir support
+### Chapitre 8 : Event
+* [exercice 01](chap8_Event/exercices/08_Event)
 
 ### TP
 *
