@@ -18,11 +18,11 @@ class EventTest extends TestCase
 
     public function testFirstUser()
     {
-    
+        $this->assertEquals(true, true);
     }
 
     public function testAllUsers()
     {
-        
+        $this->assertEquals(true, true);
     }
 }

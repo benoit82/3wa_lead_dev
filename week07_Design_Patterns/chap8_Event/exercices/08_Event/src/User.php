@@ -1,4 +1,5 @@
 <?php
+
 namespace App;
 
 class User
@@ -8,7 +9,7 @@ class User
     protected $id;
     protected $email;
     protected $history_count;
-    protected $dsn ;
+    protected $dsn;
 
     public function __construct($dsn)
     {
@@ -17,19 +18,23 @@ class User
         $this->pdo = FactoryPDO::buildSqlite($dsn);
     }
 
-    public function getId(){
-     return $this->id;
+    public function getId()
+    {
+        return $this->id;
     }
 
-    public function getHistoryCount(){
+    public function getHistoryCount()
+    {
         return $this->history_count;
     }
 
-    public function setHistoryCount(int $count){
+    public function setHistoryCount(int $count)
+    {
         $this->history_count = $count;
     }
 
-    public function find(int $id){
+    public function find(int $id)
+    {
 
         $prepare = $this->pdo->prepare('SELECT * FROM users WHERE id=?');
 
@@ -39,14 +44,14 @@ class User
         return $prepare->fetchObject(User::class, [$this->dsn]);
     }
 
-    public function all(){
+    public function all()
+    {
         $prepare = $this->pdo->prepare('SELECT * FROM users');
         $prepare->execute();
         return $prepare->fetchAll(\PDO::FETCH_CLASS);
     }
 
-    public function persist():void{
-
-        
+    public function persist(): void
+    {
     }
 }
