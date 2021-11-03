@@ -10,6 +10,8 @@
 * voir support
 ### Chapitre 4 : Decorator / décorateur
 * [exercice 01](chap4_Decorator/exercices/01/app)
+### Chapitre 5 : composite
+* [exercice 01](chap5_Composite/exercices/01/app)
 
 ### TP
 *
