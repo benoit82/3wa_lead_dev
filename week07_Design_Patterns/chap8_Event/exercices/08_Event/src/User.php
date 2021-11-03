@@ -33,7 +33,7 @@ class User
         $this->history_count = $count;
     }
 
-    public function find(int $id)
+    public function find(int $id): User
     {
 
         $prepare = $this->pdo->prepare('SELECT * FROM users WHERE id=?');
@@ -53,5 +53,11 @@ class User
 
     public function persist(): void
     {
+        $prepare = $this->pdo->prepare('UPDATE users SET history_count = ? WHERE id = ?');
+
+        $prepare->bindValue(1, $this->getHistoryCount());
+        $prepare->bindValue(2, $this->id);
+
+        $prepare->execute();
     }
 }
