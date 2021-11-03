@@ -13,9 +13,9 @@ class DecoratorTest extends TestCase
         $this->assertEquals((string) new Paragraph((new Text('hello world'))), '<p>hello world</p>');
     }
     /**
-     * @test testDisplayParagraph display a text in italic inside a paragraph
+     * @test testDisplayTextInItalicInParagraph display a text in italic inside a paragraph
      */
-    public function testDisplayParagraph()
+    public function testDisplayTextInItalicInParagraph()
     {
         $this->assertEquals((string) new Paragraph((new Italic(new Text('hello world')))), '<p><em>hello world</em></p>');
     }
