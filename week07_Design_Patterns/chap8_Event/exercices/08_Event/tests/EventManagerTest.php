@@ -1,8 +1,6 @@
 <?php
 
-use App\EventManager;
-use App\User;
-use App\FactoryPDO;
+use App\{User, FactoryPDO, EventManager};
 
 use PHPUnit\Framework\TestCase;
 
