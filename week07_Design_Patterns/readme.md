@@ -19,8 +19,4 @@
 ### Chapitre 8 : Event
 * [exercice 01](chap8_Event/exercices/08_Event)
 
-### TP
-*
-
-### Rappel TECH
-*
+### [TP](TP/)
