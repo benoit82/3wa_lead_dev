@@ -10,4 +10,4 @@
 - [Semaine 06 : BDD](/week06_BDD/readme.md)
 - [Semaine 07 : Design Pattern](/week07_Pattern/readme.md)
     - [TP : Framework-PHP](https://github.com/benoit82/framework-php)
-- [Semaine 08 : Git Doc](week08_GIT_DOC_COMM/readme.md)
+- [Semaine 08 : Git Doc](/week08_GIT_DOC_COMM/readme.md)
