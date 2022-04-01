@@ -1,0 +1,43 @@
+FROM ubuntu:20.04
+
+# PREINSTALL
+RUN apt update && apt upgrade -y
+RUN apt install sudo -y && apt install ssh -y
+
+# apt install lsof -> outil d'observation des fichiers ouvert
+# lsof -i -P -n | grep LISTEN -> observation des ports
+
+# de base, il n'y a pas de port ouvert, ni fermer, ils ne sont pas activer
+
+# (s)ftp    20/21   -> faisable mais preferer passer par protocol ssh
+# ssh       22      -> changer le port par defaut + virer le mot de passe + mettre une clef ssh
+# http      80      -> protocol non sécurisé, à bloquer
+# https     443
+
+# port < 1024 : sont "réservé"
+
+# il faut sécuriser ces ports
+# 80 => service X
+# 80 => reverseproxy => localhost:8080 => service
+# reverseproxy : verifie le cookie, l'adresse ip, blacklist ...
+
+
+# SSH
+# installation client ssh
+# 1. créer un user ssh qui se connectera en ssh en root
+## mdp >= 12 caracteres, pour l'exemple, on simplifie par "toto"
+## creation de l'utilisateur sans mot de passe actuellement
+RUN useradd -ms /bin/bash ssh_user && chpasswd <<< 'ssh_user:toto'
+# permet de faire reconnaitre ssh_user comme admin root
+RUN usermod -aG sudo ssh_user
+
+# 2. install SSH / 8 -> 37 -> Europe/Paris -> tzdata (timezone data)
+RUN apt install ssh -y
+
+# confi ssh : /etc/ssh/sshd_config
+
+port 22 -> on change (ex 2022)
+AllowUsers ssh_user
+PermitRootLogin no
+AuthorizedKeysFile .ssh/Authorized_keys .ssh/Authorized_keys2
+PasswordAuthentication no

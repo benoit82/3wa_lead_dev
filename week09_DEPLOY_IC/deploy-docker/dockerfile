@@ -1,0 +1,77 @@
+FROM ubuntu:20.04
+
+# PRE INSTALLATION
+
+ENV DEBIAN_FRONTEND noninteractive
+ENV DEBCONF_NONINTERACTIVE_SEEN true
+
+RUN apt update
+RUN apt upgrade -y
+RUN apt install sudo -y
+RUN echo "tzdata tzdata/Areas select Europe" > /tmp/preseed.txt; \
+    echo "tzdata tzdata/Zones/Europe select Paris" >> /tmp/preseed.txt; \
+    debconf-set-selections /tmp/preseed.txt
+
+RUN apt install ssh -y
+
+# SSH
+
+RUN useradd -ms /bin/bash ssh_user
+RUN chpasswd <<< "ssh_user:toto"
+RUN usermod -aG sudo ssh_user
+
+# ne pas oublier de copier la clef ssh dans /home/ssh_user/.ssh/authorized_keys
+
+COPY ./id_rsa.pub /home/ssh_user/.ssh/authorized_keys
+
+
+# INSTALLATION DES PREREQUIS
+# apt install mysql
+# apt install apache2
+# apt install php (version?)
+
+# CONFIGURATION
+
+# configurer mysql user root + user applicatif + charger la structure de la/les db
+
+# ajouter les modules php qui vont bien libapache2-mod-php php-zip php-bz2 php-mbstring php-mysql php-xml
+
+# config apache2 htaccess / vhost / ports / ssl (https)
+
+
+
+# DEPENDENCIES
+
+# composer
+
+# symfony
+
+# node
+
+# toto
+
+# nvm
+
+# npm
+
+# sass
+
+
+
+# PROJET
+
+# su mon_projet (changer d'utilisateur)
+
+# git clone url mon_projet
+
+# cd mon_projet
+
+# composer install / npm i
+
+# base de données ? php bin/console d:d:c etc...
+
+
+
+# RELOAD
+
+# service apache2 restart
